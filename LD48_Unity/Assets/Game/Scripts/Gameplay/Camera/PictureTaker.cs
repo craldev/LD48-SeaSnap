@@ -3,6 +3,7 @@ using DUCK.Tween;
 using DUCK.Tween.Extensions;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 namespace LD48.Gameplay.Camera
 {
@@ -16,6 +17,9 @@ namespace LD48.Gameplay.Camera
 
         [SerializeField]
         private UnityEngine.Camera pictureCamera;
+
+        [SerializeField]
+        private RawImage rawImage;
 
         [SerializeField]
         private float fieldOfView = 30f;
@@ -34,6 +38,12 @@ namespace LD48.Gameplay.Camera
 
         private void Start()
         {
+            pictureCamera.targetTexture.height = Screen.height;
+            pictureCamera.targetTexture.width = Screen.width;
+
+            pictureCamera.enabled = false;
+            rawImage.gameObject.SetActive(false);
+
             camera = UnityEngine.Camera.main;
             defaultFOV = camera.fieldOfView;
 
@@ -70,9 +80,14 @@ namespace LD48.Gameplay.Camera
 
 
             captureAnimation = new SequencedAnimation();
+            captureAnimation.Invoke(() => { Time.timeScale = 0f; });
             captureAnimation.Fade(blackScreen, 0f, 1f, 0.1f);
             captureAnimation.Invoke(TakeScreenshot);
+            captureAnimation.Invoke(() => { rawImage.gameObject.SetActive(true); });
             captureAnimation.Fade(blackScreen, 1f, 0f, 0.1f);
+            captureAnimation.Wait(2f);
+            captureAnimation.Invoke(() => { Time.timeScale = 1f; });
+            captureAnimation.Invoke(() => { rawImage.gameObject.SetActive(false); });
 
             cameraAction.performed += HandleActivate;
             cameraAction.Enable();
@@ -83,7 +98,6 @@ namespace LD48.Gameplay.Camera
 
         private void HandleCapture(InputAction.CallbackContext obj)
         {
-            Debug.Log("Cap");
             if (!isActive || activationAnimation.IsPlaying || deactivationAnimation.IsPlaying || captureAnimation.IsPlaying) return;
             Capture();
         }
@@ -121,8 +135,20 @@ namespace LD48.Gameplay.Camera
 
         private async void TakeScreenshot()
         {
-           pictureCamera.Render
+            pictureCamera.enabled = true;
+            pictureCamera.backgroundColor = camera.backgroundColor;
+            await UniTask.NextFrame();
+
+            rawImage.texture = ToTexture2D(pictureCamera.targetTexture);
         }
 
+        private static Texture2D ToTexture2D(RenderTexture rTex)
+        {
+            var tex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false, true);
+            RenderTexture.active = rTex;
+            tex.ReadPixels(new Rect(0, 0, rTex.width, rTex.height), 0, 0);
+            tex.Apply();
+            return tex;
+        }
     }
 }
