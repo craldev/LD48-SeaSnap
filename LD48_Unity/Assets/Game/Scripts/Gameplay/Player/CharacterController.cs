@@ -29,6 +29,9 @@ namespace LD48.Gameplay.Player
 		[SerializeField]
 		private Vector2 lookClamp = new Vector2(90f, 90f);
 
+		[SerializeField]
+		private float cameraDampMovement = 0.2f;
+
 		private InputAction movementAction;
 		private InputAction verticalMovementAction;
 		private InputAction lookAction;
@@ -75,7 +78,7 @@ namespace LD48.Gameplay.Player
 			movementInput.y = verticalMovementAction.ReadValue<Vector2>().y * movementUpMultiplier;
 
 			rigidbody.AddForce(camera.transform.TransformDirection(movementInput) * movementSpeed * rigidbody.drag * Time.deltaTime, ForceMode.VelocityChange);
-			camera.transform.position = Vector3.SmoothDamp(camera.transform.position, transform.position, ref cameraVelocity, 0.2f);
+			camera.transform.position = Vector3.SmoothDamp(camera.transform.position, transform.position, ref cameraVelocity, cameraDampMovement * Time.deltaTime);
 
 			rotationInput = lookAction.ReadValue<Vector2>();
 

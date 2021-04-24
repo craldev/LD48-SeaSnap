@@ -17,33 +17,20 @@ namespace LD48.Gameplay.Util
 		private Axis axis;
 
 		private Camera camera;
+		private Vector3 baseOffset;
 
 		private void Start()
 		{
 			camera = Camera.main;
+			baseOffset = transform.up;
 		}
 
 		private void Update()
 		{
-			var cameraPosition = camera.transform.position;
-			var v = cameraPosition - transform.position;
+			var vector = camera.transform.forward;
 
-			if (axis.HasFlag(Axis.X))
-			{
-				v.x = 0f;
-			}
+			transform.LookAt(camera.transform.position, baseOffset);
 
-			if (axis.HasFlag(Axis.Y))
-			{
-				v.y = 0f;
-			}
-
-			if (axis.HasFlag(Axis.Z))
-			{
-				v.z = 0f;
-			}
-
-			transform.LookAt(cameraPosition - v);
 		}
 	}
 }
