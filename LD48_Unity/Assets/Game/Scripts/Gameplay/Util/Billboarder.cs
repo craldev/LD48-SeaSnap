@@ -1,55 +1,49 @@
+using System;
 using UnityEngine;
 
 namespace LD48.Gameplay.Util
 {
 	public class Billboarder : MonoBehaviour
 	{
-		private Camera referenceCamera;
-
-		public enum Axis
+		[Flags]
+		private enum Axis
 		{
-			Up,
-			Down,
-			Left,
-			Right,
-			Forward,
-			Back
+			X = 1 << 0,
+			Y = 1 << 1,
+			Z = 1 << 2
 		}
 
-		public bool reverseFace;
-		public Axis axis = Axis.Up;
+		[SerializeField]
+		private Axis axis;
 
-		// return a direction based upon chosen axis
-		private static Vector3 GetAxis(Axis refAxis)
+		private Camera camera;
+
+		private void Start()
 		{
-			return refAxis switch
-			{
-				Axis.Down => Vector3.down,
-				Axis.Forward => Vector3.forward,
-				Axis.Back => Vector3.back,
-				Axis.Left => Vector3.left,
-				Axis.Right => Vector3.right,
-				// default is Vector3.up
-				_ => Vector3.up
-			};
+			camera = Camera.main;
 		}
 
-		private void Awake()
+		private void Update()
 		{
-			// if no camera referenced, grab the main camera
-			if (referenceCamera == null)
+			var cameraPosition = camera.transform.position;
+			var v = cameraPosition - transform.position;
+
+			if (axis.HasFlag(Axis.X))
 			{
-				referenceCamera = Camera.main;
+				v.x = 0f;
 			}
-		}
 
-		private void LateUpdate()
-		{
-			// rotates the object relative to the camera
-			var cameraRotation = referenceCamera.transform.rotation;
-			Vector3 targetPos = transform.position + cameraRotation * (reverseFace ? Vector3.forward : Vector3.back);
-			Vector3 targetOrientation = cameraRotation * GetAxis(axis);
-			transform.LookAt(targetPos, targetOrientation);
+			if (axis.HasFlag(Axis.Y))
+			{
+				v.y = 0f;
+			}
+
+			if (axis.HasFlag(Axis.Z))
+			{
+				v.z = 0f;
+			}
+
+			transform.LookAt(cameraPosition - v);
 		}
 	}
 }
