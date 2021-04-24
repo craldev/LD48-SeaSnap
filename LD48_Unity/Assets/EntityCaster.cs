@@ -28,11 +28,10 @@ public class EntityCaster : MonoBehaviour
     private void Update()
     {
         var distance = defaultDistance * Mathf.InverseLerp(0.5f, 0.1f, RenderSettings.fogDensity);
-        Debug.Log(distance);
         var ray = camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         if (Physics.Raycast(ray, out var hit, distance, layerMask))
         {
-            if (hit.transform.TryGetComponent<EntityInfo>(out var entityInfo))
+            if (hit.transform.TryGetComponent(out EntityInfo entityInfo) || hit.transform.parent.TryGetComponent(out entityInfo))
             {
                 textMeshPro.text = entityInfo.Name;
                 return;
