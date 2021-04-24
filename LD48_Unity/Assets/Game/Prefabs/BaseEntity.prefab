@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156299036248352122}
   - component: {fileID: 1502502690610195400}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,8 +92,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4769462529621414238}
   - component: {fileID: 737713905102083803}
-  m_Layer: 0
-  m_Name: BaseCoral
+  - component: {fileID: 2942408744394912764}
+  - component: {fileID: 8394861797975906580}
+  m_Layer: 6
+  m_Name: BaseEntity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,3 +130,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renderer: {fileID: 1502502690610195400}
   lockedAxis: 2
+--- !u!114 &2942408744394912764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438515432365561691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e84ba48d6e9f124d99886a1af44fc36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: DEFAULT_NAME
+--- !u!135 &8394861797975906580
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6438515432365561691}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
