@@ -11,6 +11,7 @@
 /[Bb]uild*
 /[Ww]indows/
 /[Ll]ogs/
+/ProjectSettings/ProjectVersion
 
 # OS X only:
 .DS_Store
