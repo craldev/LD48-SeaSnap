@@ -8,29 +8,47 @@ namespace LD48.Gameplay.Util
 		[Flags]
 		private enum Axis
 		{
-			X = 1 << 0,
-			Y = 1 << 1,
-			Z = 1 << 2
+			X = 1,
+			Y = 2,
+			Z = 4
 		}
+		[SerializeField]
+		private SpriteRenderer renderer;
 
 		[SerializeField]
-		private Axis axis;
+		private Axis lockedAxis;
 
 		private Camera camera;
-		private Vector3 baseOffset;
 
 		private void Start()
 		{
-			camera = Camera.main;
-			baseOffset = transform.up;
+			if (camera == null)
+			{
+				camera = Camera.main;
+			}
 		}
 
 		private void Update()
 		{
-			var vector = camera.transform.forward;
+			var position = transform.position;
+			var cameraDirection = (position - camera.transform.position).normalized;
 
-			transform.LookAt(camera.transform.position, baseOffset);
+			if (lockedAxis.HasFlag(Axis.X))
+			{
+				cameraDirection.x = 0f;
+			}
 
+			if (lockedAxis.HasFlag(Axis.Y))
+			{
+				cameraDirection.y = 0f;
+			}
+
+			if (lockedAxis.HasFlag(Axis.Z))
+			{
+				cameraDirection.z = 0f;
+			}
+
+			renderer.transform.localRotation = Quaternion.LookRotation(cameraDirection);
 		}
 	}
 }

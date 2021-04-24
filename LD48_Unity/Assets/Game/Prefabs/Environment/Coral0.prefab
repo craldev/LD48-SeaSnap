@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1502502690610195400, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8622902819697217211, guid: 423009d5929c1214283346399695161e, type: 3}
+    - target: {fileID: 1502502690610195400, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3445624603820237884, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -61,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438515432365561691, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_Name
-      value: BaseCoral
+      value: Coral0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
