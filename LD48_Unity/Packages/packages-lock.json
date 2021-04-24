@@ -1,5 +1,19 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "958a8e11ab88d5eea69aea65397f8dbe74ef03ff"
+    },
+    "com.dubitlimited.duck.tween": {
+      "version": "git+https://github.com/XRGames/duck-tween#c360c54a1b998b999611dac340cf6f066fc7ccdc",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "c360c54a1b998b999611dac340cf6f066fc7ccdc"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
