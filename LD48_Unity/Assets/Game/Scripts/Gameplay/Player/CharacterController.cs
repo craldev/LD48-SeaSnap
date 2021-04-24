@@ -11,7 +11,7 @@ namespace LD48.Gameplay.Player
 		private Rigidbody rigidbody;
 
 		[SerializeField]
-		private Camera camera;
+		private UnityEngine.Camera camera;
 
 		[Header("Config")]
 		[SerializeField]
@@ -49,7 +49,6 @@ namespace LD48.Gameplay.Player
 
 			lookAction = map.AddAction("look", binding: "<Mouse>/delta");
 			movementAction = map.AddAction("move", binding: "<Gamepad>/leftStick");
-			verticalMovementAction = map.AddAction("Vertical Movement");
 
 			lookAction.AddBinding("<Gamepad>/rightStick").WithProcessor("scaleVector2(x=15, y=15)");
 
@@ -59,6 +58,7 @@ namespace LD48.Gameplay.Player
 				.With("Left", "<Keyboard>/a")
 				.With("Right", "<Keyboard>/d");
 
+			verticalMovementAction = map.AddAction("Vertical Movement");
 			verticalMovementAction.AddCompositeBinding("Dpad")
 				.With("Up", "<Keyboard>/space")
 				.With("Up", "<Gamepad>/buttonSouth");

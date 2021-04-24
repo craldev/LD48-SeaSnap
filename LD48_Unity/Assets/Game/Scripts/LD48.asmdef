@@ -2,7 +2,9 @@
     "name": "LD48",
     "rootNamespace": "LD48",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c"
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:2d02ab2e6994940488cba0ac7763aec0",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

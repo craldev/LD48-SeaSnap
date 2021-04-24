@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.dubitlimited.duck.tween": "git+https://github.com/XRGames/duck-tween#c360c54a1b998b999611dac340cf6f066fc7ccdc",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.cinemachine": "2.6.4",
     "com.unity.ide.rider": "2.0.7",

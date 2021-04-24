@@ -18,13 +18,13 @@ namespace LD48.Gameplay.Util
 		[SerializeField]
 		private Axis lockedAxis;
 
-		private Camera camera;
+		private UnityEngine.Camera camera;
 
 		private void Start()
 		{
 			if (camera == null)
 			{
-				camera = Camera.main;
+				camera = UnityEngine.Camera.main;
 			}
 		}
 
