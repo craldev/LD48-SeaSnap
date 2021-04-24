@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: a36bc4b1837a9a04b974616e9ff3b26c
+guid: d892fe748defaa34cbf7e4cf0c4e2354
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5788731709722113508
-    second: Tex_Kelp_0
+      213: -5294351073036419627
+    second: Tex_Flort_0
   - first:
-      213: 7296026951831211366
-    second: Tex_Kelp_1
+      213: -4281489548292394984
+    second: Tex_Flort_1
+  - first:
+      213: -8355394367483673176
+    second: Tex_Flort_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tex_Kelp_0
+      name: Tex_Flort_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,20 +144,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e5b60ae1d4b55050800000000000000
-      internalID: 5788731709722113508
+      spriteID: 5ddb47fefbfa686b0800000000000000
+      internalID: -5294351073036419627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tex_Kelp_1
+      name: Tex_Flort_1
       rect:
         serializedVersion: 2
         x: 32
@@ -162,14 +165,35 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66d439f4bd1b04560800000000000000
-      internalID: 7296026951831211366
+      spriteID: 810fb7ca0f71594c0800000000000000
+      internalID: -4281489548292394984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tex_Flort_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a506df671dab0c80800000000000000
+      internalID: -8355394367483673176
       vertices: []
       indices: 
       edges: []

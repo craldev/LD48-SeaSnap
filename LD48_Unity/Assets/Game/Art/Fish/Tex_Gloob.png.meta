@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 423009d5929c1214283346399695161e
+guid: 71bfcef04b3e08f4f89b59c9ce2673f5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8622902819697217211
-    second: Tex_Coral_0
+      213: -4330500911269989811
+    second: Tex_Gloob_0
+  - first:
+      213: -2468607876999472192
+    second: Tex_Gloob_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -130,7 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tex_Coral_0
+      name: Tex_Gloob_0
       rect:
         serializedVersion: 2
         x: 0
@@ -144,8 +147,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 541bb33529b455880800000000000000
-      internalID: -8622902819697217211
+      spriteID: d423f3c7d58f6e3c0800000000000000
+      internalID: -4330500911269989811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tex_Gloob_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb17b1173ebdbdd0800000000000000
+      internalID: -2468607876999472192
       vertices: []
       indices: 
       edges: []
