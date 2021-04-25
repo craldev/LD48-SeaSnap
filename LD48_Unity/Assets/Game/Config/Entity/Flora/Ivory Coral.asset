@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Ivory Coral
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: 7fc38abe-4738-4c04-9df8-dadb8fcccfef
   entityName: Ivory Coral
   description: This white coral is stronger than any other type of coral in this
     habitat. It is often used as chew toys for larger species.

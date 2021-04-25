@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Shroom Coral
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: c73b9bd6-9aac-4a3e-82be-2a1e74db9c54
   entityName: Shroom Coral
   description: This mineral rich coral has mushrooms growing upon it. Smaller species
     of fish feed on these shrooms as they contain a large amount of nutrients.

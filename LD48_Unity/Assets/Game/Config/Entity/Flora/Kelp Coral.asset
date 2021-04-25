@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Kelp Coral
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: c48dc40b-41d5-4b06-88c7-21551c688e6f
   entityName: Kelp Coral
   description: This coral is one of the many Kelp seeds that are often washed from
     the Kelp Field to habitats that don't quite support full Kelp strands.

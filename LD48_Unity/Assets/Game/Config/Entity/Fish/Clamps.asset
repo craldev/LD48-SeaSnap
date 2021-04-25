@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Clamps
   m_EditorClassIdentifier: 
-  guid: de7865f4-5c99-4c94-8c6b-373a676fc36c
+  guid: 5d823e4f-981a-4280-834a-b8021318ad2f
   entityName: Clamps
   description: DESCRIPTION

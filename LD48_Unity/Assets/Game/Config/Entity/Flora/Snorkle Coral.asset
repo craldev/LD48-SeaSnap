@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Snorkle Coral
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: 8b530b13-d203-4535-b480-7554c179d565
   entityName: Snorkle Coral
   description: A group of coral tubes that house oxygen bubbles in the bottom. These
     pockets of oxygen are useful to certain lifeforms.

@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: BigMouth
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: 223749a6-7f34-4d78-8f2d-38f417f605e8
   entityName: I need a name
+  description: DESCRIPTION

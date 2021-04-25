@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Globe Coral
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: 76f4c206-5564-4353-9d73-afdd7818da32
   entityName: Globe Coral
   description: This spherical coral houses an enormous amount of microscopic life.
     This life will slowly devour the coral over the course of its lifetime.

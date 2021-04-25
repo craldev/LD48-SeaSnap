@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Fan Coral
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: 0a3b59d2-6d06-4f68-bbd8-c024bf65b118
   entityName: Fan Coral
   description: A thin coral that sways in the waves, it often provides good hiding
     spots for prey.

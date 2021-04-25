@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Flort
   m_EditorClassIdentifier: 
-  guid: de7865f4-5c99-4c94-8c6b-373a676fc36c
+  guid: 68c5d18c-c46c-45d3-87b6-45599fe1017d
   entityName: Flort
   description: A mostly stationary jellyfish-like creature that emits an ambient
     light. Other creatures often use Florts for navigation.

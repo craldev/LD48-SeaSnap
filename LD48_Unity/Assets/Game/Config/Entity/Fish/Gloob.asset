@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Gloob
   m_EditorClassIdentifier: 
-  guid: de7865f4-5c99-4c94-8c6b-373a676fc36c
+  guid: cb463eb9-fa5f-4047-8ec3-5f23d7e6d60d
   entityName: Gloob
+  description: DESCRIPTION

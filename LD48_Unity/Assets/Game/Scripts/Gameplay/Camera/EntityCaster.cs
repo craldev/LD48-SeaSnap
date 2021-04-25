@@ -22,6 +22,7 @@ namespace LD48.Gameplay.Camera
         [SerializeField]
         private float defaultDistance = 7f;
 
+        private bool force;
         private void Start()
         {
             Instance = this;
@@ -39,18 +40,26 @@ namespace LD48.Gameplay.Camera
                     {
                         CurrentActiveEntity = entityInfo.Entity;
 
-                        if (SaveData.Instance.UpgradeData.ScannerUpgrade)
+                        if (SaveData.Instance.UpgradeData.ScannerUpgrade || force)
                         {
                             textMeshPro.text = entityInfo.Entity.DisplayName;
                         }
-
+                        else
+                        {
+                            textMeshPro.text = "";
+                        }
                         return;
                     }
                 }
             }
 
             CurrentActiveEntity = null;
-            textMeshPro.text = "";
+            textMeshPro.text = "Entity Not Found<br>(Try getting clearer picture!)";
+        }
+
+        public void ForceDisplayName(bool value)
+        {
+            force = value;
         }
     }
 }

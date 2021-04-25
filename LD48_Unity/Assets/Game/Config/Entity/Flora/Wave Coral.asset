@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Wave Coral
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: 828f5569-a478-4912-962f-f2d09f1ee1bf
   entityName: Wave Coral
   description: A naturally formed coral grows updwards the more waves wash over it.

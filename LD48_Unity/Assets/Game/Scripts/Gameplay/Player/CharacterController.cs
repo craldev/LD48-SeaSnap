@@ -18,6 +18,9 @@ namespace LD48.Gameplay.Player
 		private UnityEngine.Camera camera;
 		public static UnityEngine.Camera Camera => Instance.camera;
 
+		[SerializeField]
+		private Transform spawnPoint;
+
 		[Header("Config")]
 		[SerializeField]
 		private float movementSpeed = 2f;
@@ -67,9 +70,18 @@ namespace LD48.Gameplay.Player
 		{
 			Instance = this;
 
-			transform.position = SaveData.Instance.PlayerData.PlayerPosition;
-			transform.rotation = SaveData.Instance.PlayerData.PlayerRotation;
-			camera.transform.rotation = SaveData.Instance.PlayerData.CameraRotation;
+			if (SaveData.Instance.PlayerData.PlayerPosition != Vector3.zero)
+			{
+				transform.position = SaveData.Instance.PlayerData.PlayerPosition;
+				transform.rotation = SaveData.Instance.PlayerData.PlayerRotation;
+				camera.transform.rotation = SaveData.Instance.PlayerData.CameraRotation;
+			}
+			else
+			{
+				transform.position = spawnPoint.transform.position;
+				transform.rotation = spawnPoint.transform.rotation;
+				camera.transform.rotation = spawnPoint.transform.rotation;
+			}
 
 			//Input Setup
 			var map = new InputActionMap("Character Controller");

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Star Coral
   m_EditorClassIdentifier: 
-  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  guid: 25b42c42-ad2c-48a7-aa03-bdaa1d68f632
   entityName: Star Coral
   description: A coral formed out of the body of dead starfish. Although dead, it
     still feeds from nutrients in the ground.

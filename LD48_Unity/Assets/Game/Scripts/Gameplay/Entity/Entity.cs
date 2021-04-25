@@ -14,7 +14,7 @@ namespace LD48.Gameplay.Entity
 
 		[SerializeField]
 		private string guid = System.Guid.NewGuid().ToString();
-		public string GUID => guid;
+		public string GUID { get => guid; set => guid = value; }
 
 		[SerializeField]
 		private string entityName = "DEFAULT_NAME";

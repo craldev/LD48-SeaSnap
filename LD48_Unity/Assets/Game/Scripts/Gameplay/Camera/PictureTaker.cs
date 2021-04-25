@@ -1,6 +1,7 @@
 using DUCK.Tween;
 using DUCK.Tween.Extensions;
 using LD48.Save;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -9,7 +10,12 @@ namespace LD48.Gameplay.Camera
 {
     public class PictureTaker : MonoBehaviour
     {
+        public static PictureTaker Instance { get; private set; }
         public static bool IsActive { get; private set; }
+
+        [SerializeField]
+        private TextMeshProUGUI entityName;
+
         [SerializeField]
         private CanvasGroup cameraGroup;
 
@@ -41,6 +47,8 @@ namespace LD48.Gameplay.Camera
 
         private void Start()
         {
+            Instance = this;
+
             pictureCamera.targetTexture.height = Screen.height;
             pictureCamera.targetTexture.width = Screen.width;
 
@@ -86,12 +94,20 @@ namespace LD48.Gameplay.Camera
             captureAnimation.Invoke(() => { Time.timeScale = 0f; });
             captureAnimation.Fade(blackScreen, 0f, 1f, 0.1f);
             captureAnimation.Invoke(TakeScreenshot);
-            captureAnimation.Invoke(() => { rawImage.gameObject.SetActive(true); });
+            captureAnimation.Invoke(() =>
+            {
+                rawImage.gameObject.SetActive(true);
+                EntityCaster.Instance.ForceDisplayName(true);
+            });
             captureAnimation.Fade(blackScreen, 1f, 0f, 0.1f);
             captureAnimation.Wait(2f);
-            captureAnimation.Invoke(() => { Time.timeScale = 1f; });
-            captureAnimation.Invoke(() => { rawImage.gameObject.SetActive(false); });
+            captureAnimation.Invoke(() =>
+            {
+                Time.timeScale = 1f;
+                rawImage.gameObject.SetActive(false);
+                EntityCaster.Instance.ForceDisplayName(false);
 
+            });
             cameraAction.performed += HandleActivate;
             cameraAction.Enable();
 
@@ -152,12 +168,6 @@ namespace LD48.Gameplay.Camera
             tex.ReadPixels(new Rect(0, 0, mRt.width, mRt.height), 0, 0);
             tex.Apply();
 
-            /*
-            var path = "Assets/Textures/Rendered textures/" + fileName + ".png";
-            File.WriteAllBytes(path, tex.EncodeToPNG());
-            Debug.Log("Saved file to: " + path);
-            */
-
             rawImage.texture = tex;
 
             if (EntityCaster.CurrentActiveEntity != null)
@@ -172,6 +182,7 @@ namespace LD48.Gameplay.Camera
             DestroyImmediate(mRt);
 
             SaveData.Instance.SaveGame();
+
         }
     }
 }
