@@ -51,6 +51,11 @@ public class SkyboxController : MonoBehaviour
 
         RenderSettings.fogDensity = Mathf.Lerp(depthValues[currentIndex].GetDensity(), depthValues[nextIndex].GetDensity(), currentDepth % 1);
     }
+
+    private void OnDisable()
+    {
+        RenderSettings.fogDensity = 0f;
+    }
 }
 
 [Serializable]
