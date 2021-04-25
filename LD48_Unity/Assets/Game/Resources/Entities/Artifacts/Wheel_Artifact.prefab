@@ -71,5 +71,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wheel_Artifact
       objectReference: {fileID: 0}
+    - target: {fileID: 8394861797975906580, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: m_Radius
+      value: 0.5621095
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394861797975906580, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: m_Center.y
+      value: 0.105267644
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}

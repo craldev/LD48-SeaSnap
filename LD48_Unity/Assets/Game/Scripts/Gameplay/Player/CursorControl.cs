@@ -6,7 +6,7 @@ namespace LD48.Gameplay.Player
 	{
 		private void Start()
 		{
-			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.lockState = CursorLockMode.Confined;
 			Cursor.visible = false;
 		}
 	}

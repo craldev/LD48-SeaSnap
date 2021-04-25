@@ -30,7 +30,7 @@ namespace LD48.Gameplay.Camera
 
         private void Update()
         {
-            var distance = defaultDistance * Mathf.InverseLerp(0.5f, 0.1f, RenderSettings.fogDensity);
+            var distance = defaultDistance * Mathf.InverseLerp(2.5f, 0f, RenderSettings.fogDensity);
             var ray = camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
             if (Physics.Raycast(ray, out var hit, distance, layerMask))
             {
