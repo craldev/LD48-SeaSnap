@@ -79,7 +79,7 @@ MonoBehaviour:
     name: Coral2
   - gameObject: {fileID: 3152279543790990159, guid: b9395e4041cd6164c9e970eff79f6597, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 11.428572
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -95,7 +95,7 @@ MonoBehaviour:
     name: Coral3
   - gameObject: {fileID: 2982113514454067645, guid: fff21aac756377443a2c64668d88c4a8, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 29.795918
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -143,7 +143,7 @@ MonoBehaviour:
     name: Coral6
   - gameObject: {fileID: 5292555088070571112, guid: ae14ddc8a25f6d04da19b5ec3360ab14, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 15.10204
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
