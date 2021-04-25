@@ -39,6 +39,10 @@ PrefabInstance:
       propertyPath: name
       value: Spireet
       objectReference: {fileID: 0}
+    - target: {fileID: 2942408744394912764, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: entity
+      value: 
+      objectReference: {fileID: 11400000, guid: 44c5c843ac346c34d81800d5609d982d, type: 2}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -85,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438515432365561691, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_Name
-      value: GhostFish
+      value: Spireet
       objectReference: {fileID: 0}
     - target: {fileID: 8394861797975906580, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_Radius

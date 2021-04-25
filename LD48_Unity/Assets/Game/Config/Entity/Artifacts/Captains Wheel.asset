@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
-  m_Name: BigBrenda
+  m_Name: Captains Wheel
   m_EditorClassIdentifier: 
-  guid: 4a391bd6-af64-458c-9ec2-dd14d0d66e9f
-  entityName: Trident
-  description: A solid gold trident 3 times the size of you. It's unclear what type
-    of creature would be able to use a wepon this size.
+  guid: d80da846-0d8f-41f3-942e-ffd43f1e4cdd
+  entityName: Captains' Wheel
+  description: The wooden steering wheel from a very old vessel. It's worn and buried,
+    but it appears the sealife has kept it relatively clean.

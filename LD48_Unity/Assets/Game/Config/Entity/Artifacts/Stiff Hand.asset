@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
-  m_Name: BigBrenda
+  m_Name: Stiff Hand
   m_EditorClassIdentifier: 
-  guid: 4a391bd6-af64-458c-9ec2-dd14d0d66e9f
-  entityName: Trident
-  description: A solid gold trident 3 times the size of you. It's unclear what type
-    of creature would be able to use a wepon this size.
+  guid: 9b993c3c-0657-4fd8-8f63-181909c15d5c
+  entityName: Stiff Hand
+  description: A not so lucky traveller from a time long ago. It appears they were
+    buried alive, though maybe that's for the best.

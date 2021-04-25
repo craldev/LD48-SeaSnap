@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2942408744394912764, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: entity
+      value: 
+      objectReference: {fileID: 11400000, guid: ec12bb21511edc64f8f5b65f412810e2, type: 2}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -69,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6438515432365561691, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_Name
-      value: CrystalRock
+      value: CrystalRock0
       objectReference: {fileID: 0}
     - target: {fileID: 8394861797975906580, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_Radius

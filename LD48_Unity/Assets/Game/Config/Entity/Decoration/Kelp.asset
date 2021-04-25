@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
-  m_Name: BigBrenda
+  m_Name: Kelp
   m_EditorClassIdentifier: 
-  guid: 4a391bd6-af64-458c-9ec2-dd14d0d66e9f
-  entityName: Trident
-  description: A solid gold trident 3 times the size of you. It's unclear what type
-    of creature would be able to use a wepon this size.
+  guid: df666f0c-b217-420a-981b-7bad277b21d7
+  entityName: Kelp
+  description: Tall strands of kelp reaching towards the surface. They provide excellent
+    shade and hiding spots for smaller species as larger sealife can get tangled
+    in them.
