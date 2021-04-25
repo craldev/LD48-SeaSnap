@@ -20,6 +20,10 @@ namespace LD48.Gameplay.Entity
 		private string entityName = "DEFAULT_NAME";
 		public string EntityName => entityName;
 
+		[SerializeField]
+		private string description = "DESCRIPTION";
+		public string Description => description;
+
 		private EntityType entityType;
 
 		public void Initialize(EntityType entityType)

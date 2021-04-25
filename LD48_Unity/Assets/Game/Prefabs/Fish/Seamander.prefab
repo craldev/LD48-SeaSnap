@@ -16,6 +16,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &5212662966977087401
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818067099290953242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0e2675f3187a78345bf5397069c4ad97, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &9097828376981729601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39,6 +58,10 @@ PrefabInstance:
       propertyPath: name
       value: Seamander
       objectReference: {fileID: 0}
+    - target: {fileID: 2942408744394912764, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: entity
+      value: 
+      objectReference: {fileID: 11400000, guid: 76aef8063c2e5f5418d06d4ba48acc6b, type: 2}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_RootOrder
       value: 0

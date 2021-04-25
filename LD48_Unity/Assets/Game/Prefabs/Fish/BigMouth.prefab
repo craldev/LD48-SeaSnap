@@ -16,6 +16,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &2802299587650136266
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636394389498764036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 790e93fdc7fdfbe4ab79f216f47aeec0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5876879750968183903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39,6 +58,10 @@ PrefabInstance:
       propertyPath: name
       value: Big Mouth
       objectReference: {fileID: 0}
+    - target: {fileID: 2942408744394912764, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: entity
+      value: 
+      objectReference: {fileID: 11400000, guid: 8d071c9a16491d34396bf76d0aa5ca93, type: 2}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_RootOrder
       value: 0

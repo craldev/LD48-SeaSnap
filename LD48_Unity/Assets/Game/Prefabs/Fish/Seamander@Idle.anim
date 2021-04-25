@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: JellyFish@Idle
+  m_Name: Seamander@Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -5294351073036419627, guid: d892fe748defaa34cbf7e4cf0c4e2354, type: 3}
+      value: {fileID: -3970558689359457849, guid: a75c2e81fd8a2e846906c4e41742bbf9, type: 3}
     - time: 0.5
-      value: {fileID: -4281489548292394984, guid: d892fe748defaa34cbf7e4cf0c4e2354, type: 3}
-    - time: 1
-      value: {fileID: -8355394367483673176, guid: d892fe748defaa34cbf7e4cf0c4e2354, type: 3}
-    - time: 1.5
-      value: {fileID: -4281489548292394984, guid: d892fe748defaa34cbf7e4cf0c4e2354, type: 3}
+      value: {fileID: 2571762375089361275, guid: a75c2e81fd8a2e846906c4e41742bbf9, type: 3}
     attribute: m_Sprite
     path: Sprite
     classID: 212
@@ -46,16 +42,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -5294351073036419627, guid: d892fe748defaa34cbf7e4cf0c4e2354, type: 3}
-    - {fileID: -4281489548292394984, guid: d892fe748defaa34cbf7e4cf0c4e2354, type: 3}
-    - {fileID: -8355394367483673176, guid: d892fe748defaa34cbf7e4cf0c4e2354, type: 3}
-    - {fileID: -4281489548292394984, guid: d892fe748defaa34cbf7e4cf0c4e2354, type: 3}
+    - {fileID: -3970558689359457849, guid: a75c2e81fd8a2e846906c4e41742bbf9, type: 3}
+    - {fileID: 2571762375089361275, guid: a75c2e81fd8a2e846906c4e41742bbf9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

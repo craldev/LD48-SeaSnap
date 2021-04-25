@@ -97,6 +97,12 @@ namespace LD48.Save
 		private void SerializeSaveData(string filePath)
 		{
 			var jsonString = JsonUtility.ToJson(instance);
+			
+			if (!Directory.Exists(filePath + fileData.FileName))
+			{
+				Directory.CreateDirectory(filePath + fileData.FileName);
+			}
+
 			File.WriteAllText(filePath + fileData.FileName + "/" + SAVE_SUFFIX, jsonString);
 		}
 
