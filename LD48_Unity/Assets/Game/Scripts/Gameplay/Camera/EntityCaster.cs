@@ -37,7 +37,7 @@ namespace LD48.Gameplay.Camera
                     if (entityInfo.Entity != null)
                     {
                         CurrentActiveEntity = entityInfo.Entity;
-                        textMeshPro.text = entityInfo.Entity.EntityName;
+                        textMeshPro.text = entityInfo.Entity.DisplayName;
                         return;
                     }
                     else
