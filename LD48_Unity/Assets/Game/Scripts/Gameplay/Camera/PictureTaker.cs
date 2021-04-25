@@ -1,3 +1,4 @@
+using System.IO;
 using Cysharp.Threading.Tasks;
 using DUCK.Tween;
 using DUCK.Tween.Extensions;
@@ -20,10 +21,19 @@ namespace LD48.Gameplay.Camera
         private UnityEngine.Camera pictureCamera;
 
         [SerializeField]
+        RenderTexture renderTexture;
+
+        [SerializeField]
         private RawImage rawImage;
 
         [SerializeField]
         private float fieldOfView = 30f;
+
+        [SerializeField]
+        private RenderTextureFormat renderTextureFormat;
+
+        [SerializeField]
+        private TextureFormat textureFormat;
 
         private bool isActive;
         private float defaultFOV;
@@ -35,8 +45,7 @@ namespace LD48.Gameplay.Camera
         private SequencedAnimation captureAnimation;
 
         [SerializeField]
-        private Texture2D texture;
-
+        private Texture2D texture2D;
         private void Start()
         {
             pictureCamera.targetTexture.height = Screen.height;
@@ -134,13 +143,56 @@ namespace LD48.Gameplay.Camera
             captureAnimation.Play();
         }
 
+        public void TakeScreenshot()
+        {
+            pictureCamera.backgroundColor = camera.backgroundColor;
+
+            var mRt = new RenderTexture(renderTexture.width, renderTexture.height, renderTexture.depth, renderTextureFormat, RenderTextureReadWrite.sRGB) {antiAliasing = renderTexture.antiAliasing};
+
+            var tex = new Texture2D(mRt.width, mRt.height, TextureFormat.ARGB32, false);
+            pictureCamera.targetTexture = mRt;
+            pictureCamera.Render();
+            RenderTexture.active = mRt;
+
+            tex.ReadPixels(new Rect(0, 0, mRt.width, mRt.height), 0, 0);
+            tex.Apply();
+
+            /*
+            var path = "Assets/Textures/Rendered textures/" + fileName + ".png";
+            File.WriteAllBytes(path, tex.EncodeToPNG());
+            Debug.Log("Saved file to: " + path);
+            */
+
+            rawImage.texture = tex;
+
+            if (EntityCaster.CurrentActiveEntity != null)
+            {
+                SaveData.Instance.SaveCapture(EntityCaster.CurrentActiveEntity, tex);
+            }
+
+            pictureCamera.targetTexture = renderTexture;
+            pictureCamera.Render();
+            RenderTexture.active = renderTexture;
+
+            DestroyImmediate(mRt);
+        }
+        /*
         private async void TakeScreenshot()
         {
             pictureCamera.enabled = true;
             pictureCamera.backgroundColor = camera.backgroundColor;
             await UniTask.NextFrame();
 
-            var texture = ToTexture2D(pictureCamera.targetTexture);
+            var mRt = new RenderTexture(renderTexture.width, renderTexture.height, renderTexture.depth, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB) {antiAliasing = rt.antiAliasing};
+
+            var tex = new Texture2D(mRt.width, mRt.height, TextureFormat.ARGB32, false);
+            pictureCamera.targetTexture = mRt;
+            pictureCamera.Render();
+            RenderTexture.active = mRt;
+
+            tex.ReadPixels(new Rect(0, 0, mRt.width, mRt.height), 0, 0);
+            tex.Apply();
+
             rawImage.texture = texture;
 
             if (EntityCaster.CurrentActiveEntity != null)
@@ -154,11 +206,12 @@ namespace LD48.Gameplay.Camera
 
         private static Texture2D ToTexture2D(RenderTexture rTex)
         {
-            var tex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false, true);
+            var tex = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false, true);
             RenderTexture.active = rTex;
             tex.ReadPixels(new Rect(0, 0, rTex.width, rTex.height), 0, 0);
             tex.Apply();
             return tex;
         }
+        */
     }
 }

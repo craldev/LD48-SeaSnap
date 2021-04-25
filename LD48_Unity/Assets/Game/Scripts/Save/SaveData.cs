@@ -94,8 +94,9 @@ namespace LD48.Save
 			CurrentSessionData.LastSaveTime = Time.time;
 		}
 
-		private void SerializeSaveData(string filePath)
+		private async void SerializeSaveData(string filePath)
 		{
+			await UniTask.SwitchToMainThread();
 			var jsonString = JsonUtility.ToJson(instance);
 			File.WriteAllText(filePath + fileData.FileName + "/" + SAVE_SUFFIX, jsonString);
 		}
