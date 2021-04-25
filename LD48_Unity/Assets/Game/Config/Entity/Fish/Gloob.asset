@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: cb463eb9-fa5f-4047-8ec3-5f23d7e6d60d
   entityName: Gloob
-  description: DESCRIPTION
+  description: A very passive fish that feeds on the surrounding kelp and coral.
+    Gloobs usually travel in large packs due to thier limited range of vision.

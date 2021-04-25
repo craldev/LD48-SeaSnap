@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: de7865f4-5c99-4c94-8c6b-373a676fc36c
   entityName: Saber Shark
-  description: DESCRIPTION
+  description: A moderately dangerous predator with long fangs used to killing prey.
+    This species likes to hunt around kelp and deeper open waters.

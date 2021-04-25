@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: e616eec7-c82a-4fda-abb6-1786803f8efa
   entityName: Gulp
-  description: DESCRIPTION
+  description: A monstrous behomoth that dwells in the darkest reaches of this ocean.
+    It uses its tentacles to stir the water around it, leading prey into its gaping
+    mouth.

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: 9eb99376-9043-49ac-ba76-bd3733cf9b2c
   entityName: Shrimpy
-  description: DESCRIPTION
+  description: A passive crustacean that dwells on the seabed. It cleans bacteria
+    from the sand and rock as it traverses. Because of its hard shell and usefulness,
+    most predators leave this species alone.

@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: 5d823e4f-981a-4280-834a-b8021318ad2f
   entityName: Clamps
-  description: DESCRIPTION
+  description: This species likes to gnaw on crystals. It will kill smaller living
+    creatures and bury them in the sand. It will tend to these graves and deposit
+    minerals that allow crystals to emerge from the ground.

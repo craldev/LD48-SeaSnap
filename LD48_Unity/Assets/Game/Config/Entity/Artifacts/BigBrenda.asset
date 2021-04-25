@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
-  m_Name: Eel
+  m_Name: Trident
   m_EditorClassIdentifier: 
-  guid: 86c9119a-8071-455e-92ce-3cec076473cc
-  entityName: Eel
-  description: DESCRIPTION
+  guid: f074656c-5a9c-4093-847b-e4502ea3e2c7
+  entityName: Trident
+  description: A solid gold trident 3 times the size of you. It's unclear what type
+    of creature would be able to use a wepon this size.

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: dd75a0c1-e048-4b89-b0bb-2eaec2bfdeaf
   entityName: Starfish
-  description: DESCRIPTION
+  description: An unusual starfish that resembles a constellation of stars. It appears
+    to be mostly migrating since it stays near the surface of the ocean.
