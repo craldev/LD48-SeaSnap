@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e84ba48d6e9f124d99886a1af44fc36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: The Pike
+  entity: {fileID: 11400000, guid: 100dbffdaaa4dec4095361b03240d407, type: 2}
 --- !u!135 &3591044595098716138
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5a79048d3306d924dbc65236eb4d11c3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43b930b0a5a008046b3c77255b21db4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
