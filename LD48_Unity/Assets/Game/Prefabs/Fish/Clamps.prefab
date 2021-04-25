@@ -44,7 +44,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 737713905102083803, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: lockedAxis
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1156299036248352122, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -115,8 +115,12 @@ PrefabInstance:
       value: Clamps
       objectReference: {fileID: 0}
     - target: {fileID: 8394861797975906580, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: m_Radius
+      value: 0.64617413
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394861797975906580, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_Center.y
-      value: 0
+      value: 0.6324536
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}

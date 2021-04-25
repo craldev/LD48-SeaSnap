@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Gulp
   m_EditorClassIdentifier: 
   guid: de7865f4-5c99-4c94-8c6b-373a676fc36c
-  entityName: Hulp
+  entityName: Gulp
+  description: DESCRIPTION
