@@ -175,6 +175,8 @@ namespace LD48.Gameplay.Camera
             RenderTexture.active = renderTexture;
 
             DestroyImmediate(mRt);
+
+            SaveData.Instance.SaveGame();
         }
         /*
         private async void TakeScreenshot()

@@ -18,6 +18,7 @@ namespace LD48.Gameplay.Entity
 
 		[SerializeField]
 		private string entityName = "DEFAULT_NAME";
+		public string DisplayName => isDiscovered ? entityName : "???";
 		public string EntityName => entityName;
 
 		[SerializeField]
@@ -25,6 +26,7 @@ namespace LD48.Gameplay.Entity
 		public string Description => description;
 
 		private EntityType entityType;
+		private bool isDiscovered;
 
 		public void Initialize(EntityType entityType)
 		{
@@ -34,6 +36,11 @@ namespace LD48.Gameplay.Entity
 		public EntityType GetType()
 		{
 			return entityType;
+		}
+
+		public void Discover()
+		{
+			isDiscovered = true;
 		}
 	}
 }

@@ -17,11 +17,18 @@ namespace LD48.Save
 
 		public void Initialize()
 		{
+			foreach (var entry in journalEntries)
+			{
+				entry.entity.Discover();
+			}
+
 			journalDictionary = journalEntries.ToDictionary(entity => entity.entity);
 		}
 
 		public void Add(Entity entity, JournalEntry journalEntry)
 		{
+			entity.Discover();
+
 			journalEntries.Add(journalEntry);
 			journalDictionary.Add(entity, journalEntry);
 		}
