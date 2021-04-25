@@ -54,7 +54,7 @@ namespace LD48.Gameplay.Camera
             }
 
             CurrentActiveEntity = null;
-            textMeshPro.text = "Entity Not Found<br>(Try getting clearer picture!)";
+            textMeshPro.text = force ? "Entity Not Found<br>(Try getting clearer picture!)" : "";
         }
 
         public void ForceDisplayName(bool value)
