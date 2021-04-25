@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Crystal Cluster
   m_EditorClassIdentifier: 
-  guid: 83262670-12ef-44fc-a8c7-8a30374cbc75
+  guid: 1429e230-b9ca-46fb-8dc1-640c2d6faf02
   entityName: Crystal Cluster
   description: Several glistening minerals erupt from a cragged rock. You can see
     your reflection in them.
