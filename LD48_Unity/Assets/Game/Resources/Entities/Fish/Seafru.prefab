@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &-9150145155170640142
+--- !u!54 &6491917110233640839
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7544370937603332668}
+  m_GameObject: {fileID: 2818067099290953242}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
@@ -16,7 +16,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!1001 &3596351665519037799
+--- !u!95 &5212662966977087401
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818067099290953242}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3f6e145701115e4794f9bb1eca48502, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &6490648355382533971
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903173433526821844}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &9097828376981729601
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -32,16 +70,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1951286533464820584, guid: 1ba4582ead41a374f8ed4ca9d7ec0419, type: 3}
     - target: {fileID: 1502502690610195400, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1502502690610195400, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2942408744394912764, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: name
-      value: Seafru
+      value: Seamander
       objectReference: {fileID: 0}
     - target: {fileID: 2942408744394912764, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: entity
@@ -53,15 +87,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.524
+      value: 4.28
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.34
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.44
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -101,8 +135,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
---- !u!1 &7544370937603332668 stripped
+--- !u!1 &2818067099290953242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6438515432365561691, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
-  m_PrefabInstance: {fileID: 3596351665519037799}
+  m_PrefabInstance: {fileID: 9097828376981729601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6903173433526821844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2417594197435568789, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+  m_PrefabInstance: {fileID: 9097828376981729601}
   m_PrefabAsset: {fileID: 0}
