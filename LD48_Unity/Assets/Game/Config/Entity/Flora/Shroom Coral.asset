@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
-  m_Name: Wave Coral 1
+  m_Name: Shroom Coral
   m_EditorClassIdentifier: 
   guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
-  entityName: Kelp Coral
-  description: This coral is one of the many Kelp seeds that are often washed from
-    the Kelp Field to habitats that don't quite support full Kelp strands.
+  entityName: Shroom Coral
+  description: This mineral rich coral has mushrooms growing upon it. Smaller species
+    of fish feed on these shrooms as they contain a large amount of nutrients.

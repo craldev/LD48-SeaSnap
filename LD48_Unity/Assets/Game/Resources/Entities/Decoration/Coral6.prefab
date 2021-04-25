@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2942408744394912764, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+      propertyPath: entity
+      value: 
+      objectReference: {fileID: 11400000, guid: 2954824a64b3b5b43ae5b4aa1326e9db, type: 2}
     - target: {fileID: 3445624603820237884, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_Sprite
       value: 

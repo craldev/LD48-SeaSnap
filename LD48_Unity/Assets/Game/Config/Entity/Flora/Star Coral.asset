@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
+  m_Name: Star Coral
+  m_EditorClassIdentifier: 
+  guid: cdac5a1d-25d2-4d6d-9839-26bb5061ca68
+  entityName: Star Coral
+  description: A coral formed out of the body of dead starfish. Although dead, it
+    still feeds from nutrients in the ground.
