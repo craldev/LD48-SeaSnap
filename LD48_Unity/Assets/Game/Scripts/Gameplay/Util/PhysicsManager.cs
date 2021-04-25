@@ -11,6 +11,7 @@ namespace LD48.Gameplay.Util
 
         private void Update()
         {
+            if (Time.timeScale <= 0) return;
             Physics.Simulate(Time.deltaTime);
         }
     }
