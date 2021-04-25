@@ -15,11 +15,8 @@ namespace LD48.Save
 		public Quaternion PlayerRotation { get => playerRotation; set => playerRotation = value; }
 
 		[SerializeField]
-		private Vector3 cameraPosition;
-		public Vector3 CameraPosition { get => cameraPosition; set => cameraPosition = value; }
+		private Quaternion cameraRotation;
+		public Quaternion CameraRotation { get => cameraRotation; set => cameraRotation = value; }
 
-		[SerializeField]
-		private float cameraYValue;
-		public float CameraYValue { get => cameraYValue; set => cameraYValue = value; }
 	}
 }

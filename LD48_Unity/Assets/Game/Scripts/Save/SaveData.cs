@@ -3,6 +3,7 @@ using System.IO;
 using Cysharp.Threading.Tasks;
 using LD48.Gameplay.Entity;
 using UnityEngine;
+using CharacterController = LD48.Gameplay.Player.CharacterController;
 
 namespace LD48.Save
 {
@@ -90,6 +91,10 @@ namespace LD48.Save
 			if (!isLoaded) return;
 
 			await UniTask.WaitForEndOfFrame();
+
+			PlayerData.PlayerPosition = CharacterController.Instance.transform.position;
+			PlayerData.PlayerRotation = CharacterController.Instance.transform.rotation;
+			PlayerData.CameraRotation = CharacterController.Camera.transform.rotation;
 
 			FileData.LastSaveDate = DateTime.Now.ToString("HH:mm dd MMMM, yyyy");
 			FileData.TotalPlayTime += Mathf.RoundToInt(Time.time - CurrentSessionData.LastSaveTime);

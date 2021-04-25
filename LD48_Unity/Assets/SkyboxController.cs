@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using LD48.Save;
 using UnityEngine;
 
 public class SkyboxController : MonoBehaviour
@@ -48,7 +49,7 @@ public class SkyboxController : MonoBehaviour
         camera.backgroundColor = cameraBackgroundColor;
         RenderSettings.fogColor = cameraBackgroundColor;
 
-        RenderSettings.fogDensity = Mathf.Lerp(depthValues[currentIndex].fogDensity, depthValues[nextIndex].fogDensity, currentDepth % 1);
+        RenderSettings.fogDensity = Mathf.Lerp(depthValues[currentIndex].GetDensity(), depthValues[nextIndex].GetDensity(), currentDepth % 1);
     }
 }
 
@@ -58,4 +59,9 @@ public struct DepthValue
     public Color color;
     public float fogDensity;
     public float depth;
+
+    public float GetDensity() => fogDensity * visionRange[SaveData.Instance.UpgradeData.DepthVision];
+
+    [SerializeField]
+    private float[] visionRange;
 }

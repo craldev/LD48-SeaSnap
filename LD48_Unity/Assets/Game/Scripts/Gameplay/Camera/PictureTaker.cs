@@ -1,5 +1,3 @@
-using System.IO;
-using Cysharp.Threading.Tasks;
 using DUCK.Tween;
 using DUCK.Tween.Extensions;
 using LD48.Save;
@@ -11,6 +9,7 @@ namespace LD48.Gameplay.Camera
 {
     public class PictureTaker : MonoBehaviour
     {
+        public static bool IsActive { get; private set; }
         [SerializeField]
         private CanvasGroup cameraGroup;
 
@@ -32,10 +31,6 @@ namespace LD48.Gameplay.Camera
         [SerializeField]
         private RenderTextureFormat renderTextureFormat;
 
-        [SerializeField]
-        private TextureFormat textureFormat;
-
-        private bool isActive;
         private float defaultFOV;
         private UnityEngine.Camera camera;
         private InputAction cameraAction;
@@ -44,8 +39,6 @@ namespace LD48.Gameplay.Camera
         private SequencedAnimation deactivationAnimation;
         private SequencedAnimation captureAnimation;
 
-        [SerializeField]
-        private Texture2D texture2D;
         private void Start()
         {
             pictureCamera.targetTexture.height = Screen.height;
@@ -108,7 +101,7 @@ namespace LD48.Gameplay.Camera
 
         private void HandleCapture(InputAction.CallbackContext obj)
         {
-            if (!isActive || activationAnimation.IsPlaying || deactivationAnimation.IsPlaying || captureAnimation.IsPlaying) return;
+            if (!IsActive || activationAnimation.IsPlaying || deactivationAnimation.IsPlaying || captureAnimation.IsPlaying) return;
             Capture();
         }
 
@@ -116,7 +109,7 @@ namespace LD48.Gameplay.Camera
         {
             if (activationAnimation.IsPlaying || deactivationAnimation.IsPlaying || captureAnimation.IsPlaying) return;
 
-            if (!isActive)
+            if (!IsActive)
             {
                 Activate();
             }
@@ -129,13 +122,15 @@ namespace LD48.Gameplay.Camera
         private void Activate()
         {
             activationAnimation.Play();
-            isActive = true;
+            IsActive = true;
         }
 
         private void Deactivate()
         {
-            deactivationAnimation.Play();
-            isActive = false;
+            deactivationAnimation.Play(() =>
+            {
+                IsActive = false;
+            });
         }
 
         private void Capture()
@@ -178,42 +173,5 @@ namespace LD48.Gameplay.Camera
 
             SaveData.Instance.SaveGame();
         }
-        /*
-        private async void TakeScreenshot()
-        {
-            pictureCamera.enabled = true;
-            pictureCamera.backgroundColor = camera.backgroundColor;
-            await UniTask.NextFrame();
-
-            var mRt = new RenderTexture(renderTexture.width, renderTexture.height, renderTexture.depth, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB) {antiAliasing = rt.antiAliasing};
-
-            var tex = new Texture2D(mRt.width, mRt.height, TextureFormat.ARGB32, false);
-            pictureCamera.targetTexture = mRt;
-            pictureCamera.Render();
-            RenderTexture.active = mRt;
-
-            tex.ReadPixels(new Rect(0, 0, mRt.width, mRt.height), 0, 0);
-            tex.Apply();
-
-            rawImage.texture = texture;
-
-            if (EntityCaster.CurrentActiveEntity != null)
-            {
-                SaveData.Instance.SaveCapture(EntityCaster.CurrentActiveEntity, texture);
-            }
-
-            await UniTask.SwitchToMainThread();
-			SaveData.Instance.SaveGame();
-        }
-
-        private static Texture2D ToTexture2D(RenderTexture rTex)
-        {
-            var tex = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false, true);
-            RenderTexture.active = rTex;
-            tex.ReadPixels(new Rect(0, 0, rTex.width, rTex.height), 0, 0);
-            tex.Apply();
-            return tex;
-        }
-        */
     }
 }
