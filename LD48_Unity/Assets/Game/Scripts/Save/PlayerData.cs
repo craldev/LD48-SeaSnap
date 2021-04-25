@@ -7,10 +7,6 @@ namespace LD48.Save
 	public class PlayerData
 	{
 		[SerializeField]
-		private string currentScene;
-		public string CurrentScene { get => currentScene; set => currentScene = value; }
-
-		[SerializeField]
 		private Vector3 playerPosition;
 		public Vector3 PlayerPosition { get => playerPosition; set => playerPosition = value; }
 

@@ -26,10 +26,12 @@ namespace LD48.Gameplay.Entity
 		public string Description => description;
 
 		private EntityType entityType;
-		private bool isDiscovered;
+		private bool isDiscovered = false;
 
 		public void Initialize(EntityType entityType)
 		{
+			Debug.Log(EntityName + " Init");
+			isDiscovered = false;
 			this.entityType = entityType;
 		}
 
@@ -40,6 +42,7 @@ namespace LD48.Gameplay.Entity
 
 		public void Discover()
 		{
+			Debug.Log(EntityName + " Discover");
 			isDiscovered = true;
 		}
 	}

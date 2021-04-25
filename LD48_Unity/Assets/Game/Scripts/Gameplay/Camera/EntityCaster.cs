@@ -1,4 +1,5 @@
 using LD48.Gameplay.Entity;
+using LD48.Save;
 using TMPro;
 using UnityEngine;
 
@@ -37,12 +38,13 @@ namespace LD48.Gameplay.Camera
                     if (entityInfo.Entity != null)
                     {
                         CurrentActiveEntity = entityInfo.Entity;
-                        textMeshPro.text = entityInfo.Entity.DisplayName;
+
+                        if (SaveData.Instance.UpgradeData.ScannerUpgrade)
+                        {
+                            textMeshPro.text = entityInfo.Entity.DisplayName;
+                        }
+
                         return;
-                    }
-                    else
-                    {
-                        Debug.Log("No Found");
                     }
                 }
             }

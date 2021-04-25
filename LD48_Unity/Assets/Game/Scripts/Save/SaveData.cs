@@ -25,6 +25,10 @@ namespace LD48.Save
 		public PlayerData PlayerData => playerData;
 
 		[SerializeField]
+		private UpgradeData upgradeData = new UpgradeData();
+		public UpgradeData UpgradeData => upgradeData;
+
+		[SerializeField]
 		private JournalData journalData = new JournalData();
 		public JournalData JournalData => journalData;
 
@@ -98,7 +102,7 @@ namespace LD48.Save
 		{
 			await UniTask.SwitchToMainThread();
 			var jsonString = JsonUtility.ToJson(instance);
-			
+
 			if (!Directory.Exists(filePath + fileData.FileName))
 			{
 				Directory.CreateDirectory(filePath + fileData.FileName);
