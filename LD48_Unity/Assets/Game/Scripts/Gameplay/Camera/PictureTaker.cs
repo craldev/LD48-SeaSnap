@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using DUCK.Tween;
 using DUCK.Tween.Extensions;
+using LD48.Save;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -139,7 +140,16 @@ namespace LD48.Gameplay.Camera
             pictureCamera.backgroundColor = camera.backgroundColor;
             await UniTask.NextFrame();
 
-            rawImage.texture = ToTexture2D(pictureCamera.targetTexture);
+            var texture = ToTexture2D(pictureCamera.targetTexture);
+            rawImage.texture = texture;
+
+            if (EntityCaster.CurrentActiveEntity != null)
+            {
+                SaveData.Instance.SaveCapture(EntityCaster.CurrentActiveEntity, texture);
+            }
+
+            await UniTask.SwitchToMainThread();
+			SaveData.Instance.SaveGame();
         }
 
         private static Texture2D ToTexture2D(RenderTexture rTex)
