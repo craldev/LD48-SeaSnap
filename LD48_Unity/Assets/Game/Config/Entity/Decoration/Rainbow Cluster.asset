@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
-  m_Name: BigMouth
+  m_Name: Rainbow Cluster
   m_EditorClassIdentifier: 
-  guid: 223749a6-7f34-4d78-8f2d-38f417f605e8
-  entityName: Manglerfish
-  description: 
+  guid: 1429e230-b9ca-46fb-8dc1-640c2d6faf02
+  entityName: Rainbow Cluster
+  description: Several glistening minerals erupt from a cragged rock. You can see
+    your reflection in them.
