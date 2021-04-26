@@ -32,8 +32,6 @@ namespace LD48.Gameplay.Fish
         private Vector3 startingPos;
         private Vector3 targetPos;
 
-        [SerializeField]
-        private bool debug;
         private float swimPower;
         private float timer;
         private float lastFindTime;
@@ -62,14 +60,9 @@ namespace LD48.Gameplay.Fish
             var vector = targetPos - transform.position;
             if (vector.magnitude > stoppingDistance)
             {
-                if (debug)
-                {
-                    Debug.Log(camera.transform.InverseTransformDirection(rigidbody.velocity).x);
-                }
                 rigidbody.AddForce(vector.normalized * (swimPower * Random.Range(0.5f, 1.5f)) * Time.deltaTime, ForceMode.VelocityChange);
             }
 
-            Debug.Log(camera.transform.InverseTransformDirection(rigidbody.velocity).x < 0);
             sprite.transform.localScale = new Vector3(camera.transform.InverseTransformDirection(rigidbody.velocity).x < 0 ? -1f : 1f, 1f, 1f);
         }
 
