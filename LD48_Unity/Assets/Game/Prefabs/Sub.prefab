@@ -1452,7 +1452,7 @@ MonoBehaviour:
   movementThreshold: 300
   rigidbody: {fileID: 1756408936}
   movementForce: 400
-  turnSpeed: 0.3
+  turnSpeed: 1
 --- !u!1 &4493588199839225877
 GameObject:
   m_ObjectHideFlags: 0
