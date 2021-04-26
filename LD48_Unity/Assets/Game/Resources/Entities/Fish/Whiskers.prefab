@@ -35,6 +35,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9202015975170159499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758527870701886550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d665ca31253e7974c8e403f1db5a2884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 1745524464921263020}
+  sprite: {fileID: 3751304019259023557}
+  swimRange: 3
+  swimPowerRange: {x: 0.5, y: 1}
+  avoidanceDistance: 1
+  updatePosTimerRange: {x: 1, y: 4}
+  stoppingDistance: 1
+  movementBias: {x: 1, y: 0.5, z: 1}
 --- !u!1001 &2366282191984282381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,15 +92,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 44.12
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.873
+      value: 9.11
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.143
+      value: 20.55848
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -88,15 +108,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -123,5 +143,10 @@ PrefabInstance:
 --- !u!1 &8758527870701886550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6438515432365561691, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+  m_PrefabInstance: {fileID: 2366282191984282381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &3751304019259023557 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1502502690610195400, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
   m_PrefabInstance: {fileID: 2366282191984282381}
   m_PrefabAsset: {fileID: 0}
