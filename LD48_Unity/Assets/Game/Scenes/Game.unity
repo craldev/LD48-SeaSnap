@@ -55359,6 +55359,126 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101429713, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 101429713, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 101429713, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 101429713, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 156471657, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 156471657, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 94eb4c70b2716bb4b99b1e3f669450ad, type: 3}
+    - target: {fileID: 156471657, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 156471657, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 273947426, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 273947426, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 50f24bf2759eaa042a78984862249f13, type: 3}
+    - target: {fileID: 273947426, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 50f24bf2759eaa042a78984862249f13, type: 3}
+    - target: {fileID: 273947426, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 631cb7286f1ee544792bf7e9f6d10832, type: 3}
+    - target: {fileID: 273947426, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf04cdeaec7ddc043ad7cd5655cc1a8c, type: 3}
+    - target: {fileID: 273947427, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 631cb7286f1ee544792bf7e9f6d10832, type: 3}
+    - target: {fileID: 1704965280, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704965280, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704965280, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704965280, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705685843, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705685843, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705685843, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705685843, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 188.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705685843, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 405.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705685844, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705685844, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca7175f7f8d1e9547a3497e292c07914, type: 3}
+    - target: {fileID: 1705685844, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca7175f7f8d1e9547a3497e292c07914, type: 3}
+    - target: {fileID: 1705685844, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9676c313d6a036445bcd5eeed8f71713, type: 3}
+    - target: {fileID: 1705685844, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b84bb55f60175eb48ac6224be789672c, type: 3}
+    - target: {fileID: 1705685845, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705685845, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9676c313d6a036445bcd5eeed8f71713, type: 3}
     - target: {fileID: 1752120735, guid: ccbc64e48f9a39c47ac3dd09a7deef9a, type: 3}
       propertyPath: m_Alpha
       value: 0
