@@ -14,6 +14,13 @@ namespace LD48.Gameplay.UI
 		[SerializeField]
 		private string gameSceneName;
 
+		private void Awake()
+		{
+			Cursor.lockState = CursorLockMode.Confined;
+			Cursor.visible = true;
+			SaveData.Instance.Reset();
+		}
+
 		public async void NewGame()
 		{
 			//New Save
@@ -21,8 +28,11 @@ namespace LD48.Gameplay.UI
 
 			//Load Scene
 			await GameCore.Instance.CameraFade.FadeTo(1f, 0.5f);
-			SceneManager.LoadScene(gameSceneName);
-			await SceneActivator.Run(1f);
+			Debug.Log("New Game Start");
+			await SceneManager.LoadSceneAsync(gameSceneName, LoadSceneMode.Single);
+			await UniTask.Delay(TimeSpan.FromSeconds(1f));
+			Debug.Log("New Game Done");
+			await GameCore.Instance.CameraFade.FadeTo(0f, 0.5f);
 		}
 
 		public async void LoadGame()
@@ -32,7 +42,7 @@ namespace LD48.Gameplay.UI
 
         	//Load Scene
         	await GameCore.Instance.CameraFade.FadeTo(1f, 0.5f);
-        	await SceneManager.LoadSceneAsync(gameSceneName);
+        	await SceneManager.LoadSceneAsync(gameSceneName, LoadSceneMode.Single);
             await UniTask.Delay(TimeSpan.FromSeconds(1f));
         	await SceneActivator.Run(1f);
         }

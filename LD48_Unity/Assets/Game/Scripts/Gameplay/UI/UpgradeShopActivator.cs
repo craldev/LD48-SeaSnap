@@ -54,5 +54,10 @@ namespace LD48.Gameplay.UI
 			activateAction.performed += HandleActivate;
 			interactText.SetActive(true);
 		}
+
+		private void OnDestroy()
+		{
+			upgradeShop.OnDeactivate -= HandleDeactivate;
+		}
 	}
 }

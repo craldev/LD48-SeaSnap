@@ -1,3 +1,4 @@
+using System;
 using DUCK.Tween;
 using LD48.Gameplay.Camera;
 using LD48.Save;
@@ -74,8 +75,7 @@ namespace LD48.Gameplay.Player
 
 			if (SaveData.Instance.PlayerData.PlayerPosition != Vector3.zero)
 			{
-				transform.position = SaveData.Instance.PlayerData.PlayerPosition;
-				transform.rotation = SaveData.Instance.PlayerData.PlayerRotation;
+				Warp(SaveData.Instance.PlayerData.PlayerPosition, SaveData.Instance.PlayerData.PlayerRotation);
 				camera.transform.rotation = SaveData.Instance.PlayerData.CameraRotation;
 			}
 			else
@@ -163,6 +163,20 @@ namespace LD48.Gameplay.Player
 		private void UpdateDrag(float drag)
 		{
 			rigidbody.drag = drag;
+		}
+
+		public void Warp(Vector3 moveTo, Quaternion rotationTo)
+		{
+			transform.position = moveTo;
+			transform.rotation = rotationTo;
+		}
+
+		private void OnDestroy()
+		{
+			verticalMovementAction.Dispose();
+			movementAction.Dispose();
+			lookAction.Dispose();
+			boostAction.Dispose();
 		}
 	}
 }

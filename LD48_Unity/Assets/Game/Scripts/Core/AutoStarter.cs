@@ -8,6 +8,9 @@ namespace LD48.Core
 		private const string CORE_PATH = "GameCore";
 
 		[SerializeField]
+		private bool ignoreSave;
+
+		[SerializeField]
 		private string loadSavePath;
 
 		[SerializeField]
@@ -20,17 +23,21 @@ namespace LD48.Core
 				var core = LoadGameCore();
 				core = Instantiate(core);
 
-				if (!string.IsNullOrEmpty(loadSavePath))
+				if (!ignoreSave)
 				{
-					var result = SaveData.Instance.LoadGame(loadSavePath);
+					if (!string.IsNullOrEmpty(loadSavePath))
+					{
+						var result = SaveData.Instance.LoadGame(loadSavePath);
 
-					Debug.Log("Loading Save Data " + result);
+						Debug.Log("Loading Save Data " + result);
+					}
+					else
+					{
+						SaveData.Instance.NewGame("Game1");
+					}
+
+					saveData = SaveData.Instance;
 				}
-				else
-				{
-					SaveData.Instance.NewGame("Game1");
-				}
-				saveData = SaveData.Instance;
 
 				await core.CameraFade.FadeTo(0f);
 				await SceneActivator.Run(0.5f);

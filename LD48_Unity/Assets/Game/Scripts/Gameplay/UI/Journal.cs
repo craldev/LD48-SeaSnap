@@ -213,5 +213,10 @@ namespace LD48.Gameplay.UI
 				lastSelectedEntity = entry.Entity;
 			}
 		}
+
+		private void OnDestroy()
+		{
+			activateAction.Dispose();
+		}
 	}
 }

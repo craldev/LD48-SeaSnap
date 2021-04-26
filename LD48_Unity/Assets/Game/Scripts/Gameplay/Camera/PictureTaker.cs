@@ -207,5 +207,11 @@ namespace LD48.Gameplay.Camera
             SaveData.Instance.SaveGame();
 
         }
+
+        private void OnDestroy()
+        {
+            cameraAction.performed -= HandleActivate;
+            captureAction.performed -= HandleCapture;
+        }
     }
 }
