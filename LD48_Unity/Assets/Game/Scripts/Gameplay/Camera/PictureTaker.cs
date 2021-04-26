@@ -168,7 +168,9 @@ namespace LD48.Gameplay.Camera
 
         private void DeactivateInstant()
         {
-            deactivationAnimation.FastForward();
+            cameraGroup.alpha = 0f;
+            blackScreen.alpha = 0f;
+            camera.fieldOfView = defaultFOV;
             IsActive = false;
             GameCore.Instance.PlayerBusy = false;
         }
