@@ -1,6 +1,7 @@
 using System;
 using DUCK.Tween;
 using DUCK.Tween.Extensions;
+using LD48.Audio;
 using LD48.Core;
 using LD48.Gameplay.UI;
 using LD48.Save;
@@ -39,6 +40,9 @@ namespace LD48.Gameplay.Camera
 
         [SerializeField]
         private RenderTextureFormat renderTextureFormat;
+
+        [SerializeField]
+        private AudioClip captureSFX;
 
         private float defaultFOV;
         private UnityEngine.Camera camera;
@@ -177,6 +181,7 @@ namespace LD48.Gameplay.Camera
 
         private void Capture()
         {
+            AudioSystem.Instance.PlaySound(captureSFX, false);
             captureAnimation.Play();
         }
 

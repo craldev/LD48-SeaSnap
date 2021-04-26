@@ -494,6 +494,7 @@ MonoBehaviour:
   rawImage: {fileID: 2879735702226048866}
   fieldOfView: 30
   renderTextureFormat: 0
+  captureSFX: {fileID: 8300000, guid: c0bea89fa37c102458cd3d77be854d6b, type: 3}
 --- !u!1 &2879735702382008067
 GameObject:
   m_ObjectHideFlags: 0

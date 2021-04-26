@@ -37,7 +37,6 @@ namespace LD48.Gameplay.UI
 
 		private void HandleActivate(InputAction.CallbackContext obj)
 		{
-			Debug.Log("Test");
 			if (isSettingsOpen)
 			{
 				SettingsMenu.Instance.Deactivate();

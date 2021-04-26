@@ -14,7 +14,6 @@ namespace LD48.Utils
 		private void Awake()
 		{
 			var offsetValue = Random.Range(0f, 1f);
-			Debug.Log(offsetValue);
 			animator.SetFloat(offset, offsetValue);
 		}
 	}

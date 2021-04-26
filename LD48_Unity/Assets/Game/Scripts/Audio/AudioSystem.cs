@@ -9,9 +9,11 @@ namespace LD48.Audio
 	{
 		[SerializeField]
 		private AudioSource musicSource;
+		public AudioSource MusicSource => musicSource;
 
 		private float masterVolume = 1;
 		private float musicVolume = 1;
+		public float MusicVolume => musicVolume;
 		private float audioVolume = 1;
 		private float adjustedAudioVolume = 1;
 		private bool isFading;
@@ -45,16 +47,23 @@ namespace LD48.Audio
 			StartCoroutine(FadeOut(musicSource, 0.5f));
 		}
 
-
-		public async void PlaySound(AudioClip sound)
+		public async void PlaySound(AudioClip sound, bool loop)
 		{
 			var audioSource = gameObject.AddComponent<AudioSource>();
-			audioSource.loop = false;
+			audioSource.loop = loop;
 			audioSource.volume = adjustedAudioVolume;
 			audioSource.clip = sound;
 			audioSource.Play();
-			await UniTask.WaitWhile(()=> audioSource.isPlaying);
-			Destroy(audioSource);
+			if (!loop)
+			{
+				await UniTask.WaitWhile(() => audioSource.isPlaying);
+				Destroy(audioSource);
+			}
+		}
+
+		public void UpdateMusicVolume()
+		{
+			musicSource.volume = musicVolume * masterVolume;
 		}
 
 		public void AdjustMusicVolume(float value)
