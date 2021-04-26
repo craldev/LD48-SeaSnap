@@ -51,8 +51,8 @@ MonoBehaviour:
     depth: 40
     visionRange:
     - 1
+    - 0.75
     - 0.5
-    - 0.25
   - color: {r: 0.30624774, g: 0.31187168, b: 0.5849056, a: 0}
     fogDensity: 0.05
     depth: 20
@@ -60,20 +60,20 @@ MonoBehaviour:
     - 1
     - 0.5
     - 0.25
-  - color: {r: 0.2924528, g: 0.14760591, b: 0.14760591, a: 0}
-    fogDensity: 0.1
-    depth: 10
+  - color: {r: 0.12976147, g: 0.33962262, b: 0.23082796, a: 0}
+    fogDensity: 0.4
+    depth: 4
+    visionRange:
+    - 1
+    - 0.25
+    - 0.15
+  - color: {r: 0.0754717, g: 0.0751157, b: 0.0751157, a: 0}
+    fogDensity: 1
+    depth: -10
     visionRange:
     - 1
     - 0.5
-    - 0.25
-  - color: {r: 0, g: 0, b: 0, a: 0}
-    fogDensity: 0.3
-    depth: -7
-    visionRange:
-    - 1
-    - 1
-    - 1
+    - 0.07
   currentIndex: 0
   currentDepth: 0
   playerDepthRange: {x: 0, y: 0}
