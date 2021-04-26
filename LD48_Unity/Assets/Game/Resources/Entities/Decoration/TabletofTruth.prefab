@@ -98,31 +98,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'GUIDE
-
-    <size=1.35
-
-    >
-
-    WASD = Move / Mouse = Aim
-
-
-    Right
-    Click = Camera / Left Click = Take Picture
-
-
-    Tab = Journal
-
-
-    Esc = Pause
-    / Return to Submarine
-
-
-    Return to the Submarine to purchase Upgrades to venture
-    deeper and fill in your Journal
-
-
-    Thanks for Playing!'
+  m_text: "GUIDE\n<size=1.1\n>\nWASD = Move / Mouse = Aim\n\nRight Click = Camera
+    / Left Click = Take Picture\n\nTab = Journal\n\nEsc = Pause / Return to Submarine\n\nThe
+    deeper you go the darker it gets... \nPurchase upgrades using Research Tokens!\nCollect
+    Research Tokens by taking pictures of new things!\nPurchase Upgrades from your
+    Submarine!\n\nSnap a picture of anything! \nFlora, creatures and maybe even lost
+    treasures."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 04e1ab1504f25224ca7eb822b36bb237, type: 2}
   m_sharedMaterial: {fileID: 5924307391764688340, guid: 04e1ab1504f25224ca7eb822b36bb237, type: 2}
@@ -149,8 +130,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 3
-  m_fontSizeBase: 3
+  m_fontSize: 2.5
+  m_fontSizeBase: 2.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
