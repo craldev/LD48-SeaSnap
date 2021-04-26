@@ -1034,6 +1034,7 @@ MonoBehaviour:
   masterVolume: {fileID: 2047714095818030442}
   musicVolume: {fileID: 2047714095973921217}
   audioVolume: {fileID: 2047714095072615533}
+  mouseSens: {fileID: 6452059510553324550}
 --- !u!1 &2047714094752183395
 GameObject:
   m_ObjectHideFlags: 0
@@ -3694,7 +3695,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 5557921288293910977}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
@@ -3702,7 +3703,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2047714094697046862}
         m_TargetAssemblyTypeName: LD48.Gameplay.UI.SettingsMenu, LD48
-        m_MethodName: MasterVolumeChanged
+        m_MethodName: MouseSensChanged
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

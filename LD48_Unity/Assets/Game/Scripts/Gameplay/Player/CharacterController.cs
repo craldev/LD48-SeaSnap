@@ -57,6 +57,7 @@ namespace LD48.Gameplay.Player
 		private InputAction boostAction;
 		private InputAction verticalMovementAction;
 		private InputAction lookAction;
+		private float mouseSens = 1;
 
 		private Vector3 movementInput;
 		private Vector3 rotationInput;
@@ -140,8 +141,8 @@ namespace LD48.Gameplay.Player
 
 			rotationInput = lookAction.ReadValue<Vector2>();
 
-			var mouseX = rotationInput.x * lookSpeed * Time.deltaTime;
-			var mouseY = rotationInput.y * lookSpeed * Time.deltaTime;
+			var mouseX = rotationInput.x * mouseSens * lookSpeed * Time.deltaTime;
+			var mouseY = rotationInput.y * mouseSens * lookSpeed * Time.deltaTime;
 
 			xRotation -= mouseY;
 			xRotation = Mathf.Clamp(xRotation, lookClamp.x, lookClamp.y);
@@ -177,6 +178,11 @@ namespace LD48.Gameplay.Player
 			movementAction.Dispose();
 			lookAction.Dispose();
 			boostAction.Dispose();
+		}
+
+		public void UpdateSens(float value)
+		{
+			mouseSens = value;
 		}
 	}
 }

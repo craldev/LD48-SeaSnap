@@ -1,11 +1,13 @@
 ﻿using System;
 using LD48.Audio;
+using LD48.Core;
 using UnityEngine;
 using UnityEngine.UI;
+using CharacterController = LD48.Gameplay.Player.CharacterController;
 
 namespace LD48.Gameplay.UI
 {
-	public class SettingsMenu : MonoBehaviour
+	public class SettingsMenu : MonoBehaviour, ISceneLoaded
 	{
 		public static SettingsMenu Instance { get; private set; }
 
@@ -20,6 +22,9 @@ namespace LD48.Gameplay.UI
 
 		[SerializeField]
 		private Slider audioVolume;
+
+		[SerializeField]
+		private Slider mouseSens;
 
 		public Action OnDeactivate { get; set; }
 
@@ -45,6 +50,7 @@ namespace LD48.Gameplay.UI
 			PlayerPrefs.SetFloat("Music", musicVolume.value);
 			PlayerPrefs.SetFloat("Audio", audioVolume.value);
 			PlayerPrefs.SetFloat("Master", masterVolume.value);
+			PlayerPrefs.SetFloat("MouseSens", mouseSens.value);
 		}
 
 		public void Load()
@@ -54,6 +60,16 @@ namespace LD48.Gameplay.UI
 				musicVolume.value = PlayerPrefs.GetFloat("Music");
 				audioVolume.value = PlayerPrefs.GetFloat("Audio");
 				masterVolume.value = PlayerPrefs.GetFloat("Master");
+
+				if (PlayerPrefs.HasKey("MouseSens"))
+				{
+					mouseSens.value = PlayerPrefs.GetFloat("MouseSens");
+					MouseSensChanged();
+				}
+
+				MasterVolumeChanged();
+				MusicVolumeChanged();
+				AudioVolumeChanged();
 			}
 		}
 
@@ -70,6 +86,11 @@ namespace LD48.Gameplay.UI
 		public void AudioVolumeChanged()
 		{
 			AudioSystem.Instance.AdjustAudioVolume(audioVolume.value);
+		}
+
+		public void MouseSensChanged()
+		{
+			CharacterController.Instance.UpdateSens(mouseSens.value);
 		}
 
 		public void WindowedActivate()
@@ -114,6 +135,11 @@ namespace LD48.Gameplay.UI
 			Cursor.visible = previousCursorVisible;
 
 			OnDeactivate?.Invoke();
+		}
+
+		public void HandleSceneLoaded()
+		{
+			Load();
 		}
 	}
 }
