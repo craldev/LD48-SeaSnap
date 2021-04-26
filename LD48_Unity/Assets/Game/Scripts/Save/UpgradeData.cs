@@ -21,5 +21,20 @@ namespace LD48.Save
 		[SerializeField]
 		private int swimSpeed;
 		public int SwimSpeed { get => swimSpeed; set => swimSpeed = value; }
+
+		public Action<int, int> OnCurrencyAdded { get; set; }
+		public Action<int, int> OnCurrencyRemoved { get; set; }
+
+		public void AddCurrency(int value)
+		{
+			researchCurrency += value;
+			OnCurrencyAdded?.Invoke(researchCurrency, value);
+		}
+
+		public void RemoveCurrency(int value)
+		{
+			researchCurrency -= value;
+			OnCurrencyRemoved?.Invoke(researchCurrency, value);
+		}
 	}
 }

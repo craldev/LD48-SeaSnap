@@ -255,4 +255,4 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   textMeshPro: {fileID: 0}
-  defaultDistance: 6
+  defaultDistance: 8

@@ -26,6 +26,8 @@ namespace LD48.Gameplay.Entity
 		public string Description => description;
 
 		private EntityType entityType;
+		public EntityType Type => entityType;
+
 		private bool isDiscovered;
 
 		public void Initialize(EntityType entityType)

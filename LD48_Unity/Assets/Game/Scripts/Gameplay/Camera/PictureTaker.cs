@@ -100,7 +100,7 @@ namespace LD48.Gameplay.Camera
                 EntityCaster.Instance.ForceDisplayName(true);
             });
             captureAnimation.Fade(blackScreen, 1f, 0f, 0.1f);
-            captureAnimation.Wait(2f);
+            captureAnimation.Wait(1.5f);
             captureAnimation.Invoke(() =>
             {
                 Time.timeScale = 1f;

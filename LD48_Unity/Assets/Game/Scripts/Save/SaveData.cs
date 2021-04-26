@@ -134,7 +134,23 @@ namespace LD48.Save
 			}
 			else
 			{
+				upgradeData.AddCurrency(GetValue(entity.Type));
 				journalData.Add(entity, new JournalData.JournalEntry(entity, savePath));
+			}
+		}
+
+		public int GetValue(Entity.EntityType entityType)
+		{
+			switch (entityType)
+			{
+				case Entity.EntityType.Deco:
+					return 1;
+				case Entity.EntityType.Fish:
+					return 3;
+				case Entity.EntityType.Artifact:
+					return 5;
+				default:
+					throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
 			}
 		}
 	}

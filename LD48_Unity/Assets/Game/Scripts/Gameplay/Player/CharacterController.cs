@@ -121,7 +121,8 @@ namespace LD48.Gameplay.Player
 
 			movementInput.x = movementDelta.x;
 			movementInput.z = movementDelta.y;
-			movementInput.y = verticalMovementAction.ReadValue<Vector2>().y * movementUpMultiplier;
+
+			var upwardVector = Vector3.up * verticalMovementAction.ReadValue<Vector2>().y * movementUpMultiplier;
 
 			var calculatedSpeed = movementSpeed;
 
@@ -132,7 +133,7 @@ namespace LD48.Gameplay.Player
 
 			calculatedSpeed *= swimSpeedUpdateModifiers[SaveData.Instance.UpgradeData.SwimSpeed];
 
-			rigidbody.AddForce(camera.transform.TransformDirection(movementInput) * calculatedSpeed * rigidbody.drag * Time.deltaTime, ForceMode.VelocityChange);
+			rigidbody.AddForce((camera.transform.TransformDirection(movementInput) + upwardVector) * calculatedSpeed * rigidbody.drag * Time.deltaTime, ForceMode.VelocityChange);
 			camera.transform.position = Vector3.SmoothDamp(camera.transform.position, transform.position, ref cameraVelocity, cameraDampMovement * Time.deltaTime);
 
 			rotationInput = lookAction.ReadValue<Vector2>();

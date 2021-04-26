@@ -80,7 +80,7 @@ MonoBehaviour:
   rigidbody: {fileID: 5194661023630210577}
   camera: {fileID: 0}
   spawnPoint: {fileID: 0}
-  movementSpeed: 2.5
+  movementSpeed: 4
   movementUpMultiplier: 0.7
   lookSpeed: 15
   lookDamp: 15
@@ -90,7 +90,7 @@ MonoBehaviour:
   lookClamp: {x: -80, y: 80}
   cameraDampMovement: 5
   swimSpeedUpdateModifiers:
-  - 5
+  - 1
   - 1.5
   - 2
 --- !u!1001 &5194661023315661397

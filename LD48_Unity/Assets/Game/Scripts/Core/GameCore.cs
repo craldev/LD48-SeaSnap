@@ -15,6 +15,8 @@ namespace LD48.Core
 		private EntityLibrary entityLibrary;
 		public EntityLibrary EntityLibrary => entityLibrary;
 
+		public bool PlayerBusy { get; set; }
+
 		private void Awake()
 		{
 			if (Instance == null)

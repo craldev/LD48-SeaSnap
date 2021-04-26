@@ -51,7 +51,7 @@ namespace LD48.Core
 
 			foreach (var artifactEntity in artifactEntities)
 			{
-				artifactEntity.Initialize(Entity.EntityType.Deco);
+				artifactEntity.Initialize(Entity.EntityType.Artifact);
 			}
 
 			fishDictionary = fishEntities.ToDictionary(entity => entity.GUID);

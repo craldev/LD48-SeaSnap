@@ -40,7 +40,7 @@ namespace LD48.Gameplay.Camera
                     {
                         CurrentActiveEntity = entityInfo.Entity;
 
-                        if (SaveData.Instance.UpgradeData.ScannerUpgrade || force)
+                        if ((SaveData.Instance.UpgradeData.ScannerUpgrade && PictureTaker.IsActive) || force)
                         {
                             textMeshPro.text = entityInfo.Entity.DisplayName;
                         }
@@ -54,7 +54,7 @@ namespace LD48.Gameplay.Camera
             }
 
             CurrentActiveEntity = null;
-            textMeshPro.text = force ? "Entity Not Found<br>(Try getting clearer picture!)" : "";
+            textMeshPro.text = "";
         }
 
         public void ForceDisplayName(bool value)
