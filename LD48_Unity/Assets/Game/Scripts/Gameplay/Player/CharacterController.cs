@@ -62,7 +62,9 @@ namespace LD48.Gameplay.Player
 
 		private CustomAnimation dragBoostAnimation;
 
+		[SerializeField]
 		private float xRotation;
+
 		private Vector3 cameraVelocity;
 		private float lastBoostTime;
 

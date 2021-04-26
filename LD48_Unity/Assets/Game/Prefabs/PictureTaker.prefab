@@ -366,8 +366,8 @@ CanvasGroup:
   m_GameObject: {fileID: 2879735702292023300}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &2879735702361202101
 GameObject:
@@ -580,8 +580,8 @@ CanvasGroup:
   m_GameObject: {fileID: 2879735702382008067}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &2879735702717490976
 GameObject:
@@ -858,8 +858,8 @@ CanvasGroup:
   m_GameObject: {fileID: 2879735703333668218}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &2879735703892621183
 GameObject:
@@ -943,6 +943,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2879735702361202094}
     m_Modifications:
+    - target: {fileID: 4386932198706043571, guid: 7a91e540a82e7274985ec33b7261f075, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386932198706043571, guid: 7a91e540a82e7274985ec33b7261f075, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4386932198706043574, guid: 7a91e540a82e7274985ec33b7261f075, type: 3}
       propertyPath: m_Name
       value: CurrencyCounter
