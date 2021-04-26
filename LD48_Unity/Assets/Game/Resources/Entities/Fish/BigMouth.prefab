@@ -35,6 +35,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5367970207990986981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636394389498764036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d665ca31253e7974c8e403f1db5a2884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: -4742411293325152001}
+  sprite: {fileID: 4996507132053858199}
+  swimRange: 3
+  swimPowerRange: {x: 0.5, y: 1}
+  avoidanceDistance: 1
+  updatePosTimerRange: {x: 1, y: 4}
+  stoppingDistance: 0.2
+  movementBias: {x: 1, y: 1, z: 1}
 --- !u!1001 &5876879750968183903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,5 +139,10 @@ PrefabInstance:
 --- !u!1 &636394389498764036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6438515432365561691, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+  m_PrefabInstance: {fileID: 5876879750968183903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &4996507132053858199 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1502502690610195400, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
   m_PrefabInstance: {fileID: 5876879750968183903}
   m_PrefabAsset: {fileID: 0}

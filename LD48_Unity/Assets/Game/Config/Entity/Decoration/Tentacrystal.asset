@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: 7df465dd-c6f2-4764-a4f5-f0981bad0c14
   entityName: Tentacrystal
-  description: A crystalized tentacle
+  description: A crystalized tentacle from a buried sea creature. It feels like it's
+    trying to break free.

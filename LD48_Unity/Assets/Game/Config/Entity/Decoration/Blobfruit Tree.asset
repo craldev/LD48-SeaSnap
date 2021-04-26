@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
+  m_Name: Blobfruit Tree
+  m_EditorClassIdentifier: 
+  guid: 8e2484c5-761f-40b6-9228-f952fa4602a5
+  entityName: Blobfruit Tree
+  description: A tree like plant that bears a bubbling fruit. They look messy but
+    whatever is down here must find them tasty.
