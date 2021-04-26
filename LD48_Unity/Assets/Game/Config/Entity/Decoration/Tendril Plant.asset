@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
+  m_Name: Tendril Plant
+  m_EditorClassIdentifier: 
+  guid: 279f9afe-83c4-4303-a1f8-96587aa68171
+  entityName: Tendril Plant
+  description: A tall plant with a long spiny stalk that has a bulb on top, the liquid
+    in the bulb is incredibly tasty but fatally dangerous.
