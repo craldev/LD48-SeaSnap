@@ -149,11 +149,11 @@ namespace LD48.Save
 			switch (entityType)
 			{
 				case Entity.EntityType.Misc:
-					return 1;
+					return 2;
 				case Entity.EntityType.Creature:
-					return 3;
-				case Entity.EntityType.Artifact:
 					return 5;
+				case Entity.EntityType.Artifact:
+					return 10;
 				default:
 					throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
 			}

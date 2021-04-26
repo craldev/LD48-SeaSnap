@@ -492,7 +492,7 @@ MonoBehaviour:
   pictureCamera: {fileID: 0}
   renderTexture: {fileID: 8400000, guid: 592af41e1037bde4f85c2e51b342bb8b, type: 2}
   rawImage: {fileID: 2879735702226048866}
-  fieldOfView: 30
+  fieldOfView: 45
   renderTextureFormat: 0
   captureSFX: {fileID: 8300000, guid: c0bea89fa37c102458cd3d77be854d6b, type: 3}
 --- !u!1 &2879735702382008067
