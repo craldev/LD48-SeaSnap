@@ -16,6 +16,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &1193087041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7443051594744626633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d665ca31253e7974c8e403f1db5a2884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: -7399563212555492329}
+  sprite: {fileID: 3082927719639335258}
+  swimRange: 3
+  swimPowerRange: {x: 0.5, y: 1}
+  avoidanceDistance: 1
+  updatePosTimerRange: {x: 1, y: 4}
+  stoppingDistance: 0.2
+  movementBias: {x: 1, y: 1, z: 1}
 --- !u!1001 &4472413430785862290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,15 +69,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.857994
+      value: -28.75
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.75655854
+      value: -8.23
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 57.961796
+      value: -4.93
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -104,5 +124,10 @@ PrefabInstance:
 --- !u!1 &7443051594744626633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6438515432365561691, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
+  m_PrefabInstance: {fileID: 4472413430785862290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &3082927719639335258 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1502502690610195400, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
   m_PrefabInstance: {fileID: 4472413430785862290}
   m_PrefabAsset: {fileID: 0}

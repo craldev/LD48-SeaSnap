@@ -35,6 +35,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4552923686357150812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758527870701886550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d665ca31253e7974c8e403f1db5a2884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
+  sprite: {fileID: 0}
+  swimRange: 3
+  swimPowerRange: {x: 0.5, y: 1}
+  avoidanceDistance: 1
+  updatePosTimerRange: {x: 1, y: 4}
+  stoppingDistance: 0.2
+  movementBias: {x: 1, y: 1, z: 1}
 --- !u!1001 &2366282191984282381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,15 +92,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 63.608406
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.873
+      value: 4.4866257
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.143
+      value: -74.31483
       objectReference: {fileID: 0}
     - target: {fileID: 4769462529621414238, guid: f20ae7ebe80a84f4bba4e59438235d6c, type: 3}
       propertyPath: m_LocalRotation.w
