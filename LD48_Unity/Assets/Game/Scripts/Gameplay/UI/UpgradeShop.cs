@@ -30,6 +30,8 @@ namespace LD48.Gameplay.UI
         public void Start()
         {
             canvasGroup.alpha = 0f;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
             actionText.text = "";
 
             foreach (var upgrade in upgrades)
@@ -113,6 +115,8 @@ namespace LD48.Gameplay.UI
         public void Activate()
         {
             canvasGroup.alpha = 1f;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
             Time.timeScale = 0f;
             GameCore.Instance.PlayerBusy = true;
             isActive = true;
@@ -124,6 +128,9 @@ namespace LD48.Gameplay.UI
         public void Deactivate()
         {
             canvasGroup.alpha = 0f;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+
             Time.timeScale = 1f;
             GameCore.Instance.PlayerBusy = false;
             isActive = false;
