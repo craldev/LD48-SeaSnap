@@ -12,6 +12,8 @@ namespace LD48.Gameplay.UI
 {
 	public class Journal : MonoBehaviour
 	{
+		public static Journal Instance { get; private set; }
+
 		[SerializeField]
 		private CanvasGroup canvasGroup;
 
@@ -20,6 +22,9 @@ namespace LD48.Gameplay.UI
 
 		[SerializeField]
 		private Transform entryParent;
+
+		[SerializeField]
+		private TextMeshProUGUI searchType;
 
 		[SerializeField]
 		private TextMeshProUGUI entryName;
@@ -33,17 +38,35 @@ namespace LD48.Gameplay.UI
 		[SerializeField]
 		private TextMeshProUGUI collectedText;
 
+		[SerializeField]
+		private Button creatureButton;
+
+		[SerializeField]
+		private Button artifactButton;
+
+		[SerializeField]
+		private Button miscButton;
+
 		private bool isActive;
 		private InputAction activateAction;
+		private Entity.Entity.EntityType lastEntityType = Entity.Entity.EntityType.Artifact;
+		private Entity.Entity lastSelectedEntity;
 
 		public void Start()
 		{
+			Instance = this;
+
+			canvasGroup.alpha = 0f;
+			canvasGroup.interactable = false;
+			canvasGroup.blocksRaycasts = false;
+
 			entryTemplate.gameObject.SetActive(false);
 			var map = new InputActionMap("Journal");
 			activateAction = map.AddAction("activate", binding: "<Keyboard>/t");
 
 			activateAction.performed += HandleActivate;
 			activateAction.Enable();
+			Display(null);
 		}
 
 		private void HandleActivate(InputAction.CallbackContext context)
@@ -58,8 +81,17 @@ namespace LD48.Gameplay.UI
 			}
 		}
 
+		public void Activate(Entity.Entity entity)
+		{
+			lastEntityType = entity.Type;
+			lastSelectedEntity = entity;
+			Activate();
+		}
+
 		public void Activate()
 		{
+			if (GameCore.Instance.PlayerBusy) return;
+
 			canvasGroup.alpha = 1f;
 			canvasGroup.interactable = true;
 			canvasGroup.blocksRaycasts = true;
@@ -70,11 +102,18 @@ namespace LD48.Gameplay.UI
 
 			Cursor.lockState = CursorLockMode.Confined;
 			Cursor.visible = true;
-			UpdateEntries(Entity.Entity.EntityType.Artifact);
+			UpdateEntries(lastEntityType);
+		}
+
+		public void ChangeType(int index)
+		{
+			lastEntityType = (Entity.Entity.EntityType)index;
+			UpdateEntries((Entity.Entity.EntityType)index);
 		}
 
 		private void UpdateEntries(Entity.Entity.EntityType entityType)
 		{
+			searchType.text = entityType.ToString();
 			foreach (Transform child in entryParent)
 			{
 				Destroy(child.gameObject);
@@ -86,18 +125,27 @@ namespace LD48.Gameplay.UI
 			{
 				case Entity.Entity.EntityType.Fish:
 					allEntities = GameCore.Instance.EntityLibrary.fishDictionary.Values.ToList();
+					creatureButton.interactable = false;
+					miscButton.interactable = true;
+					artifactButton.interactable = true;
 					break;
 				case Entity.Entity.EntityType.Deco:
 					allEntities = GameCore.Instance.EntityLibrary.decoDictionary.Values.ToList();
+					creatureButton.interactable = true;
+					miscButton.interactable = false;
+					artifactButton.interactable = true;
 					break;
 				case Entity.Entity.EntityType.Artifact:
 					allEntities = GameCore.Instance.EntityLibrary.artifactDictionary.Values.ToList();
+					creatureButton.interactable = true;
+					miscButton.interactable = true;
+					artifactButton.interactable = false;
 					break;
 				default:
 					throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null);
 			}
 
-			allEntities = allEntities.OrderBy(c => c.name).ThenBy(c=>c.IsDiscovered).ToList();
+			allEntities = allEntities.OrderBy(c => !c.IsDiscovered).ThenBy(c=>c.name).ToList();
 
 			foreach (var entity in allEntities)
 			{
@@ -115,9 +163,23 @@ namespace LD48.Gameplay.UI
 					entry.GetComponent<Button>().interactable = false;
 				}
 				entry.gameObject.SetActive(true);
+
+				if (lastSelectedEntity == entity)
+				{
+					Display(entry);
+				}
+				else if ((lastSelectedEntity != null && lastSelectedEntity.Type != lastEntityType || lastSelectedEntity == null) && entry.Entity.IsDiscovered)
+				{
+					Display(entry);
+				}
 			}
 
 			collectedText.text = allEntities.Count(c => c.IsDiscovered) + " / " + allEntities.Count + " Collected";
+
+			if (lastSelectedEntity == null || lastSelectedEntity.Type != lastEntityType)
+			{
+				Display(null);
+			}
 		}
 
 		public void Deactivate()
@@ -136,10 +198,20 @@ namespace LD48.Gameplay.UI
 
 		public void Display(JournalEntryPreview entry)
 		{
-			entryPicture.texture = entry.Picture.texture;
-			entryName.text = entry.Entity.DisplayName;
-			entryDescription.text = entry.Entity.Description;
-
+			if (entry == null)
+			{
+				entryPicture.texture = null;
+				entryName.text = "";
+				entryDescription.text = "";
+				lastSelectedEntity = null;
+			}
+			else
+			{
+				entryPicture.texture = entry.Picture.texture;
+				entryName.text = entry.Entity.DisplayName;
+				entryDescription.text = entry.Entity.Description;
+				lastSelectedEntity = entry.Entity;
+			}
 		}
 	}
 }

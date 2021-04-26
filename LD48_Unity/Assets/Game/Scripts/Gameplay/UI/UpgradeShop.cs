@@ -114,6 +114,8 @@ namespace LD48.Gameplay.UI
 
         public void Activate()
         {
+            if (GameCore.Instance.PlayerBusy) return;
+
             canvasGroup.alpha = 1f;
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;

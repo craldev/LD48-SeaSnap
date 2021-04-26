@@ -1,5 +1,8 @@
+using System;
 using DUCK.Tween;
 using DUCK.Tween.Extensions;
+using LD48.Core;
+using LD48.Gameplay.UI;
 using LD48.Save;
 using TMPro;
 using UnityEngine;
@@ -44,6 +47,7 @@ namespace LD48.Gameplay.Camera
         private SequencedAnimation activationAnimation;
         private SequencedAnimation deactivationAnimation;
         private SequencedAnimation captureAnimation;
+        private bool isNewCapture;
 
         private void Start()
         {
@@ -103,9 +107,17 @@ namespace LD48.Gameplay.Camera
             captureAnimation.Wait(1.5f);
             captureAnimation.Invoke(() =>
             {
-                Time.timeScale = 1f;
                 rawImage.gameObject.SetActive(false);
                 EntityCaster.Instance.ForceDisplayName(false);
+                if (isNewCapture)
+                {
+                    DeactivateInstant();
+                    Journal.Instance.Activate(EntityCaster.CurrentActiveEntity);
+                }
+                else
+                {
+                    Time.timeScale = 1f;
+                }
 
             });
             cameraAction.performed += HandleActivate;
@@ -137,16 +149,28 @@ namespace LD48.Gameplay.Camera
 
         private void Activate()
         {
+            if (GameCore.Instance.PlayerBusy) return;
+
             activationAnimation.Play();
             IsActive = true;
+            GameCore.Instance.PlayerBusy = true;
         }
 
-        private void Deactivate()
+        private void Deactivate(Action onComplete = null)
         {
             deactivationAnimation.Play(() =>
             {
                 IsActive = false;
+                GameCore.Instance.PlayerBusy = false;
+                onComplete?.Invoke();
             });
+        }
+
+        private void DeactivateInstant()
+        {
+            deactivationAnimation.FastForward();
+            IsActive = false;
+            GameCore.Instance.PlayerBusy = false;
         }
 
         private void Capture()
@@ -170,10 +194,7 @@ namespace LD48.Gameplay.Camera
 
             rawImage.texture = tex;
 
-            if (EntityCaster.CurrentActiveEntity != null)
-            {
-                SaveData.Instance.SaveCapture(EntityCaster.CurrentActiveEntity, tex);
-            }
+            isNewCapture = EntityCaster.CurrentActiveEntity != null && SaveData.Instance.SaveCapture(EntityCaster.CurrentActiveEntity, tex);
 
             pictureCamera.targetTexture = renderTexture;
             pictureCamera.Render();

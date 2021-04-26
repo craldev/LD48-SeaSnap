@@ -116,7 +116,7 @@ namespace LD48.Save
 			File.WriteAllText(filePath + fileData.FileName + "/" + SAVE_SUFFIX, jsonString);
 		}
 
-		public void SaveCapture(Entity entity, Texture2D imageTexture)
+		public bool SaveCapture(Entity entity, Texture2D imageTexture)
 		{
 			var bytes = imageTexture.EncodeToPNG();
 			var folderPath = SaveFilePath + fileData.FileName + "/Snaps/";
@@ -131,11 +131,13 @@ namespace LD48.Save
 			if (journalData.journalDictionary.ContainsKey(entity))
 			{
 				journalData.journalDictionary[entity].pictureFilePath = savePath;
+				return false;
 			}
 			else
 			{
 				upgradeData.AddCurrency(GetValue(entity.Type));
 				journalData.Add(entity, new JournalData.JournalEntry(entity, savePath));
+				return true;
 			}
 		}
 
