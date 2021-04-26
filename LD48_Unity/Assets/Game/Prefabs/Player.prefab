@@ -80,7 +80,7 @@ MonoBehaviour:
   rigidbody: {fileID: 5194661023630210577}
   camera: {fileID: 0}
   spawnPoint: {fileID: 0}
-  movementSpeed: 4
+  movementSpeed: 3
   movementUpMultiplier: 0.7
   lookSpeed: 15
   lookDamp: 15
@@ -94,7 +94,7 @@ MonoBehaviour:
   - 1.5
   - 2
   - 2.5
-  xRotation: -30
+  xRotation: -35
 --- !u!1001 &5194661023315661397
 PrefabInstance:
   m_ObjectHideFlags: 0
