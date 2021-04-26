@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: 7df465dd-c6f2-4764-a4f5-f0981bad0c14
   entityName: Tentacrystal
-  description: A coral formed out of the body of dead starfish. Although dead, it
-    still feeds from nutrients in the ground.
+  description: A crystalized tentacle

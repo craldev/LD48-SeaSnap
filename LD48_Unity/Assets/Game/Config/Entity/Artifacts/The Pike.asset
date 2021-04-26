@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: The Pike
   m_EditorClassIdentifier: 
   guid: a627af52-e3d0-4771-a1be-a7d27a29d349
-  entityName: The Pike
+  entityName: The Spike
   description: An alien obelisk with an indecipherable language written on its face.
     The structure seems to burrow very deep into the ground.
