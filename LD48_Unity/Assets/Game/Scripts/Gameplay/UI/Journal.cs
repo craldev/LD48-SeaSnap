@@ -62,7 +62,7 @@ namespace LD48.Gameplay.UI
 
 			entryTemplate.gameObject.SetActive(false);
 			var map = new InputActionMap("Journal");
-			activateAction = map.AddAction("activate", binding: "<Keyboard>/t");
+			activateAction = map.AddAction("activate", binding: "<Keyboard>/#(tab)");
 
 			activateAction.performed += HandleActivate;
 			activateAction.Enable();

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
   m_Name: Submarine
   m_EditorClassIdentifier: 
-  guid: 6065515a-11bf-45d6-8db8-36d1232161b1
-  entityName: Ol' Reliable
-  description: DESCRIPTION
+  guid: f3b7a00a-367b-4bb0-973a-700b6fd23aeb
+  entityName: My Submarine
+  description: The one and only, ol' reliable.

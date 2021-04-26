@@ -66,9 +66,9 @@ namespace LD48.Gameplay.Camera
 
             var map = new InputActionMap("Picture Taker");
 
-            cameraAction = map.AddAction("Vertical Movement");
+            cameraAction = map.AddAction("Vertical");
             cameraAction.AddCompositeBinding("Dpad")
-                .With("Up", "<Keyboard>/tab")
+                .With("Up", "<Mouse>/rightButton")
                 .With("Up", "<Gamepad>/buttonNorth");
 
 
