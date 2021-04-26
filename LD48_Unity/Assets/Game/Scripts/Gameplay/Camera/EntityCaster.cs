@@ -32,21 +32,32 @@ namespace LD48.Gameplay.Camera
         {
             var distance = defaultDistance * Mathf.InverseLerp(2.5f, 0f, RenderSettings.fogDensity);
             var ray = camera.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-            if (Physics.Raycast(ray, out var hit, distance, layerMask))
+            if (Physics.Raycast(ray, out var hit, 20f, layerMask))
             {
                 if (hit.transform.TryGetComponent(out EntityInfo entityInfo) || hit.transform.parent.TryGetComponent(out entityInfo))
                 {
                     if (entityInfo.Entity != null)
                     {
-                        CurrentActiveEntity = entityInfo.Entity;
+                        if (hit.distance > distance)
+                        {
+                            if (SaveData.Instance.UpgradeData.ScannerUpgrade && PictureTaker.IsActive || force)
+                            {
+                                textMeshPro.text = "Too far, try getting closer!";
+                                textMeshPro.transform.parent.gameObject.SetActive(true);
+                            }
 
-                        if ((SaveData.Instance.UpgradeData.ScannerUpgrade && PictureTaker.IsActive) || force)
+                            return;
+                        }
+                        CurrentActiveEntity = entityInfo.Entity;
+                        if (SaveData.Instance.UpgradeData.ScannerUpgrade && PictureTaker.IsActive || force)
                         {
                             textMeshPro.text = entityInfo.Entity.DisplayName;
+                            textMeshPro.transform.parent.gameObject.SetActive(true);
                         }
                         else
                         {
                             textMeshPro.text = "";
+                            textMeshPro.transform.parent.gameObject.SetActive(false);
                         }
                         return;
                     }
@@ -55,6 +66,7 @@ namespace LD48.Gameplay.Camera
 
             CurrentActiveEntity = null;
             textMeshPro.text = "";
+            textMeshPro.transform.parent.gameObject.SetActive(false);
         }
 
         public void ForceDisplayName(bool value)

@@ -41,12 +41,12 @@ namespace LD48.Core
 		{
 			foreach (var fishEntity in fishEntities)
 			{
-				fishEntity.Initialize(Entity.EntityType.Fish);
+				fishEntity.Initialize(Entity.EntityType.Creature);
 			}
 
 			foreach (var decoEntity in decoEntities)
 			{
-				decoEntity.Initialize(Entity.EntityType.Deco);
+				decoEntity.Initialize(Entity.EntityType.Misc);
 			}
 
 			foreach (var artifactEntity in artifactEntities)
@@ -63,8 +63,8 @@ namespace LD48.Core
 		{
 			return entityType switch
 			{
-				Entity.EntityType.Fish => fishDictionary[entityGuid],
-				Entity.EntityType.Deco => decoDictionary[entityGuid],
+				Entity.EntityType.Creature => fishDictionary[entityGuid],
+				Entity.EntityType.Misc => decoDictionary[entityGuid],
 				Entity.EntityType.Artifact => artifactDictionary[entityGuid],
 				_ => throw new ArgumentOutOfRangeException(nameof(entityType), entityType, null)
 			};

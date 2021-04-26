@@ -148,9 +148,9 @@ namespace LD48.Save
 		{
 			switch (entityType)
 			{
-				case Entity.EntityType.Deco:
+				case Entity.EntityType.Misc:
 					return 1;
-				case Entity.EntityType.Fish:
+				case Entity.EntityType.Creature:
 					return 3;
 				case Entity.EntityType.Artifact:
 					return 5;

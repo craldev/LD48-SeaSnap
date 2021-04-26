@@ -7,8 +7,8 @@ namespace LD48.Gameplay.Entity
 	{
 		public enum EntityType
 		{
-			Fish,
-			Deco,
+			Creature,
+			Misc,
 			Artifact
 		}
 

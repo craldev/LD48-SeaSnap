@@ -47,6 +47,9 @@ namespace LD48.Gameplay.UI
 		[SerializeField]
 		private Button miscButton;
 
+		[SerializeField]
+		private Texture2D missingText;
+
 		private bool isActive;
 		private InputAction activateAction;
 		private Entity.Entity.EntityType lastEntityType = Entity.Entity.EntityType.Artifact;
@@ -123,13 +126,13 @@ namespace LD48.Gameplay.UI
 
 			switch (entityType)
 			{
-				case Entity.Entity.EntityType.Fish:
+				case Entity.Entity.EntityType.Creature:
 					allEntities = GameCore.Instance.EntityLibrary.fishDictionary.Values.ToList();
 					creatureButton.interactable = false;
 					miscButton.interactable = true;
 					artifactButton.interactable = true;
 					break;
-				case Entity.Entity.EntityType.Deco:
+				case Entity.Entity.EntityType.Misc:
 					allEntities = GameCore.Instance.EntityLibrary.decoDictionary.Values.ToList();
 					creatureButton.interactable = true;
 					miscButton.interactable = false;
@@ -200,7 +203,7 @@ namespace LD48.Gameplay.UI
 		{
 			if (entry == null)
 			{
-				entryPicture.texture = null;
+				entryPicture.texture = missingText;
 				entryName.text = "";
 				entryDescription.text = "";
 				lastSelectedEntity = null;
