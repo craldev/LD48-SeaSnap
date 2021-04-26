@@ -95,7 +95,7 @@ MonoBehaviour:
     name: Coral3
   - gameObject: {fileID: 2982113514454067645, guid: fff21aac756377443a2c64668d88c4a8, type: 3}
     settings:
-      m_Strength: 29.795918
+      m_Strength: 22.448978
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -159,7 +159,7 @@ MonoBehaviour:
     name: Coral7
   - gameObject: {fileID: 4874723917149788023, guid: a36fb021986687341841888ea830e46f, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 75.71429
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -175,7 +175,7 @@ MonoBehaviour:
     name: CrystalRock0
   - gameObject: {fileID: 4874723917149788023, guid: f8c696ede1da3704db5c5e889adbf2ca, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 59.183674
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -191,7 +191,7 @@ MonoBehaviour:
     name: CrystalRock1
   - gameObject: {fileID: 4874723917149788023, guid: ec4502747206e1a42befe9e9973432fd, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 11.428572
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -207,7 +207,7 @@ MonoBehaviour:
     name: CrystalRock2
   - gameObject: {fileID: 4874723917149788023, guid: 0ce8f9e45878e0247b6510d711511cb2, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 40.816326
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
