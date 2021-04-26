@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5aab60f1358a4225802fd1a1c9ad810b, type: 3}
-  m_Name: BigBrenda
+  m_Name: Dead Fish
   m_EditorClassIdentifier: 
-  guid: 4a391bd6-af64-458c-9ec2-dd14d0d66e9f
-  entityName: Brenda
-  description: An otherworldly robot that was programmed for revenge. She has a nameplate
-    on her shell which reads Brenda.
+  guid: 9638764d-ab86-4cef-b619-9d9a4f27cbbf
+  entityName: Dead Fish
+  description: The skeletal remains of a large fish which looks to have been licked
+    clean. Whatever ate this must have been huge.
