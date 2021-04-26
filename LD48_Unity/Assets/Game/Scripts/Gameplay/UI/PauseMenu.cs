@@ -30,6 +30,7 @@ namespace LD48.Gameplay.UI
 
 			var map = new InputActionMap("PauseMenu");
 			activateAction = map.AddAction("activate", binding: "<Keyboard>/#(esc)");
+			activateAction = map.AddAction("activate", binding: "<Keyboard>/#(enter)");
 
 			activateAction.performed += HandleActivate;
 			activateAction.Enable();

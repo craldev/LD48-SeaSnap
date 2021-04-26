@@ -67,6 +67,9 @@ namespace LD48.Gameplay.Player
 		[SerializeField]
 		private float xRotation;
 
+		[SerializeField]
+		private float yRotation;
+
 		private Vector3 cameraVelocity;
 		private float lastBoostTime;
 
@@ -137,19 +140,21 @@ namespace LD48.Gameplay.Player
 			calculatedSpeed *= swimSpeedUpdateModifiers[SaveData.Instance.UpgradeData.SwimSpeed];
 
 			rigidbody.AddForce((camera.transform.TransformDirection(movementInput) + upwardVector) * calculatedSpeed * rigidbody.drag * Time.deltaTime, ForceMode.VelocityChange);
-			camera.transform.position = Vector3.SmoothDamp(camera.transform.position, transform.position, ref cameraVelocity, cameraDampMovement * Time.deltaTime);
+		}
 
+		private void LateUpdate()
+		{
+			camera.transform.position = Vector3.SmoothDamp(camera.transform.position, transform.position, ref cameraVelocity, cameraDampMovement * Time.deltaTime);
 			rotationInput = lookAction.ReadValue<Vector2>();
 
 			var mouseX = rotationInput.x * mouseSens * lookSpeed * Time.deltaTime;
 			var mouseY = rotationInput.y * mouseSens * lookSpeed * Time.deltaTime;
 
 			xRotation -= mouseY;
+			yRotation += mouseX;
 			xRotation = Mathf.Clamp(xRotation, lookClamp.x, lookClamp.y);
-
-			var cameraRotation = Quaternion.Euler(xRotation, transform.eulerAngles.y, 0f);
+			var cameraRotation = Quaternion.Euler(xRotation, yRotation, 0f);
 			camera.transform.localRotation = Quaternion.Slerp(camera.transform.localRotation , cameraRotation, lookDamp * Time.deltaTime);
-			transform.Rotate(Vector3.up * mouseX);
 		}
 
 		private void HandleBoost(InputAction.CallbackContext obj)
