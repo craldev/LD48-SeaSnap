@@ -177,7 +177,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   type:
     m_OverrideState: 1
-    m_Value: 7
+    m_Value: 0
   intensity:
     m_OverrideState: 1
     m_Value: 0.299
