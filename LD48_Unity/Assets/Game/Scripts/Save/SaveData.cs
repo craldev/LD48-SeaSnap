@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using Cysharp.Threading.Tasks;
 using LD48.Gameplay.Entity;
+using LD48.Utils;
 using UnityEngine;
 using CharacterController = LD48.Gameplay.Player.CharacterController;
 
@@ -92,9 +93,12 @@ namespace LD48.Save
 
 			await UniTask.WaitForEndOfFrame();
 
-			PlayerData.PlayerPosition = CharacterController.Instance.transform.position;
-			PlayerData.PlayerRotation = CharacterController.Instance.transform.rotation;
-			PlayerData.CameraRotation = CharacterController.Camera.transform.rotation;
+			if (CharacterController.Instance != null)
+			{
+				PlayerData.PlayerPosition = CharacterController.Instance.transform.position;
+				PlayerData.PlayerRotation = CharacterController.Instance.transform.rotation;
+				PlayerData.CameraRotation = CharacterController.Camera.transform.rotation;
+			}
 
 			FileData.LastSaveDate = DateTime.Now.ToString("HH:mm dd MMMM, yyyy");
 			FileData.TotalPlayTime += Mathf.RoundToInt(Time.time - CurrentSessionData.LastSaveTime);
@@ -131,14 +135,13 @@ namespace LD48.Save
 			if (journalData.journalDictionary.ContainsKey(entity))
 			{
 				journalData.journalDictionary[entity].pictureFilePath = savePath;
+				journalData.journalDictionary[entity].picture = TextureUtils.LoadTexture(savePath);
 				return false;
 			}
-			else
-			{
-				upgradeData.AddCurrency(GetValue(entity.Type));
-				journalData.Add(entity, new JournalData.JournalEntry(entity, savePath));
-				return true;
-			}
+
+			upgradeData.AddCurrency(GetValue(entity.Type));
+			journalData.Add(entity, new JournalData.JournalEntry(entity, savePath));
+			return true;
 		}
 
 		public int GetValue(Entity.EntityType entityType)
