@@ -90,7 +90,10 @@ namespace LD48.Gameplay.UI
 
 		public void MouseSensChanged()
 		{
-			CharacterController.Instance.UpdateSens(mouseSens.value);
+			if (CharacterController.Instance != null)
+			{
+				CharacterController.Instance.UpdateSens(mouseSens.value);
+			}
 		}
 
 		public void WindowedActivate()
