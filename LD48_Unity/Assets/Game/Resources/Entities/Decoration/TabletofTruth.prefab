@@ -99,11 +99,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "GUIDE\n<size=1.4\n>\nWASD = Move / Mouse = Aim\n\nRight Click = Camera
-    / Left Click = Take Picture\n\nTab = Journal\n\nEsc = Pause / Return to Submarine\n\nThe
-    deeper you go the darker it gets... \nPurchase upgrades using Research Tokens!\nCollect
-    Research Tokens by taking pictures of new things!\nPurchase Upgrades from your
-    Submarine!\n\nSnap a picture of anything! \nFlora, creatures and maybe even lost
-    treasures."
+    / Left Click = Take Picture\n\nTab = Journal\n\nEsc / Enter = Pause / Return
+    to Submarine\n\nThe deeper you go the darker it gets... \nPurchase upgrades using
+    Research Tokens!\nCollect Research Tokens by taking pictures of new things!\nPurchase
+    Upgrades from your Submarine!\n\nSnap a picture of anything! \nFlora, creatures
+    and maybe even lost treasures."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
