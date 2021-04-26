@@ -23,7 +23,8 @@ public class SubmarineFollow : MonoBehaviour
         {
             playerTransform = CharacterController.Instance.transform;
         }
-        var positionVector = playerTransform.position - transform.position;
+        var playerPostion = new Vector3(Mathf.Clamp(playerTransform.position.x, -65f, 65f), playerTransform.position.y, Mathf.Clamp(playerTransform.position.z, -65f, 65f));
+        var positionVector = playerPostion - transform.position;
 
         positionVector.y = 0f;
         if (positionVector.sqrMagnitude > movementThreshold)

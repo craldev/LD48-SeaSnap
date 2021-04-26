@@ -48,7 +48,11 @@ namespace LD48.Gameplay.UI
 			}
 
 			valueText.text = SaveData.Instance.UpgradeData.ResearchCurrency.ToString();
-			SetTextAlpha(0f);
+			floatingText.alpha = 0f;
+			if (!disableFade)
+			{
+				SetTextAlpha(0f);
+			}
 		}
 
 		private void HandleCurrencyAdded(int total, int value)
