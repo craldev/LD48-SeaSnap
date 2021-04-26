@@ -43,7 +43,7 @@ public class SkyboxController : MonoBehaviour
         }
         currentIndex = Mathf.Clamp(currentIndex, 0, depthValues.Count - 1);
 
-        currentDepth = Mathf.InverseLerp(depthValues[currentIndex].depth, depthValues[nextIndex].depth, player.transform.position.y);
+        currentDepth = Mathf.Clamp(Mathf.InverseLerp(depthValues[currentIndex].depth, depthValues[nextIndex].depth, player.transform.position.y), 0.01f, 0.99f);
 
         var cameraBackgroundColor = Color.Lerp(depthValues[currentIndex].color, depthValues[nextIndex].color, currentDepth % 1);
         camera.backgroundColor = cameraBackgroundColor;
