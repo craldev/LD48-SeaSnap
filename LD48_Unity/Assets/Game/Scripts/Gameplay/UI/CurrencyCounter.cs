@@ -35,11 +35,13 @@ namespace LD48.Gameplay.UI
 			SaveData.Instance.UpgradeData.OnCurrencyRemoved += HandleCurrencyRemoved;
 			floatingAnimation = new ParalleledAnimation();
 			floatingAnimation.MoveLocal(floatingText.transform, new Vector3(-90f, 45f, 0f), new Vector3(-90f, 90f, 0f));
+
 			floatingAnimation.Custom(SetTextAlpha, 1f, 0f);
 
 
 			if (!disableFade)
 			{
+				Debug.Log(gameObject.name);
 				fadeAnimation = new SequencedAnimation();
 				fadeAnimation.Fade(canvasGroup, 0f, 1f, 0f);
 				fadeAnimation.Wait(5f);

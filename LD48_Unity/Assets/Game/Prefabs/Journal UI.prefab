@@ -2598,6 +2598,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4862254568762465646}
     m_Modifications:
+    - target: {fileID: 4386932198706043570, guid: 7a91e540a82e7274985ec33b7261f075, type: 3}
+      propertyPath: disableFade
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4386932198706043574, guid: 7a91e540a82e7274985ec33b7261f075, type: 3}
       propertyPath: m_Name
       value: CurrencyCounter
